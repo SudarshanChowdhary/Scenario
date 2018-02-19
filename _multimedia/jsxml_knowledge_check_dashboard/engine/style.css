@@ -1,10 +1,163 @@
-#interaction{
-    height: 780px; width: 1000px; background-color: transparent;
+.a11y {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
 }
-.layer_variables{position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;}
-.layer_question, .layer{position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;}
-.question_txt{position: absolute; left: 0px; top: 0px; width: 100%; opacity: 1; pointer-events: auto; height: 90px;}
 
+.a11y.focusable:active,
+.a11y.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
 
-.layer_image layer{position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;}
-.bg_image{position: absolute; left: 0px; top: 0px; width: 1000px; opacity: 1; pointer-events: auto;}
+ul {
+    list-style-type: none;
+  }
+  .my-link:hover{
+      cursor: pointer; 
+      position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+border: 2px solid #FF8000;
+border-radius: 3px;
+content: "";
+opacity: 0;
+transition: opacity .3s ease-out;}
+  .need-attention:hover{
+      cursor: pointer; 
+      border: 2px solid #FF8000;
+      border-radius: 3px;
+    }
+  .my-handled:hover{
+      cursor: pointer; border: 2px solid #FF8000;
+        border-radius: 3px;
+    }
+.emerging-issues:hover{cursor: pointer; border: 2px solid #FF8000;
+border-radius: 3px;}
+.applelearn:hover{cursor: pointer; border: 2px solid #FF8000;
+border-radius: 3px;}
+.my-published:hover{cursor: pointer; border: 2px solid #FF8000;
+border-radius: 3px;}
+
+.my-commitments:hover{cursor: pointer; border: 2px solid #FF8000;
+border-radius: 3px;}
+
+.blue_button_active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 2px solid #4DA0EE;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #FFFFFF;
+    color: #4DA0EE;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    outline: none !important;
+}
+.blue_button_active {
+    border: 2px solid #4DA0EE;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #FFFFFF;
+    padding: 2px 0px 2px 0px;
+    font-family: 'Lucida Grande', Helvetica, sans-serif;
+    font-size: 10pt;
+    text-align: center;
+    color: #4DA0EE;
+    cursor: pointer;
+    cursor: hand;
+    padding: 5px;
+    outline: none !important;
+}
+
+.img-sec img{position: absolute; left: 0px; top: 0px; width: 1000px; opacity: 1; pointer-events: auto;}
+.my-link{
+    position: absolute; left: 0px; top: 19px; width: 147px; height: 543px; opacity: 1; pointer-events: auto;
+}
+
+.need-attention{
+    position: absolute; left: 228px; top: 19px; width: 464px;height: 252px; opacity: 1;pointer-events: auto;
+}
+
+.my-commitments{
+    position: absolute;
+    left: 228px;
+    top: 272px;
+    width: 464px;
+    height: 92px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.my-published{
+    position: absolute;
+    left: 228px;
+    top: 365px;
+    width: 464px;
+    height: 98px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.applelearn{
+    position: absolute;
+    left: 228px;
+    top: 468px;
+    width: 464px;
+    height: 94px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.emerging-issues{
+    position: absolute;
+    left: 778px;
+    top: 19px;
+    width: 222px;
+    height: 340px;
+    opacity: 1;
+    pointer-events: auto;
+
+}
+.my-handled{
+    position: absolute;
+    left: 778px;
+    top: 360px;
+    width: 222px;
+    height: 202px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.button_1{
+    position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1; pointer-events: auto;
+}
+.button_2{
+    position: absolute; left: 228px; top: -15px; width: 180px; opacity: 1; pointer-events: auto;
+}
+.button_3{
+    position: absolute; left: 35px; top: 270px; width: 180px; opacity: 1; pointer-events: auto;
+}
+.button_4{
+    position: absolute; left: 35px; top: 365px; width: 180px; opacity: 1; pointer-events: auto;
+}
+.button_6{
+    position: absolute; left: 788px; top: 180px; width: 200px; opacity: 1; pointer-events: auto;
+}
+.button_7{
+    position: absolute; left: 788px; top: 316px; width: 200px; opacity: 1; pointer-events: auto;
+}
