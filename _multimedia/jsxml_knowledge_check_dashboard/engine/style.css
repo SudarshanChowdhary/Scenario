@@ -1,0 +1,10 @@
+#interaction{
+    height: 780px; width: 1000px; background-color: transparent;
+}
+.layer_variables{position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;}
+.layer_question, .layer{position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;}
+.question_txt{position: absolute; left: 0px; top: 0px; width: 100%; opacity: 1; pointer-events: auto; height: 90px;}
+
+
+.layer_image layer{position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;}
+.bg_image{position: absolute; left: 0px; top: 0px; width: 1000px; opacity: 1; pointer-events: auto;}
