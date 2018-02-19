@@ -114,6 +114,19 @@
                 <action do="feedback_#!current_item_id!#.removeCssStyle(show)" />    
             </action_set> 
             
+            <action_set name="on_focus" global="true">
+                <action do="button_#!current_item_id!#.addCssStyle(on_hover)" />
+                <action do="item_#!current_item_id!#.addCssStyle(on_hover)" />
+                <action do="if(#!current_item_id!#==#!user_answer!#, feedback_#!current_item_id!#.addCssStyle(show))" />            
+            </action_set>
+            <action_set name="on_blur" global="true">
+                <action do="current_item=item_#!current_item_id!#" />
+                <action do="current_fade=fade_#!current_item_id!#" />
+                <action do="button_#!current_item_id!#.removeCssStyle(on_hover)" />
+                <action do="item_#!current_item_id!#.removeCssStyle(on_hover)" />
+                <action do="feedback_#!current_item_id!#.removeCssStyle(show)" />    
+            </action_set> 
+
             <action_set name="init_slide" global="true">
                 <action do="feedback_txt[1]=#!incorrect_feedback_txt[1]!#:feedback_txt[2]=#!incorrect_feedback_txt[2]!#:feedback_txt[3]=#!incorrect_feedback_txt[3]!#:feedback_txt[4]=#!incorrect_feedback_txt[4]!#:feedback_txt[5]=#!incorrect_feedback_txt[5]!#:feedback_txt[6]=#!incorrect_feedback_txt[6]!#:feedback_txt[7]=#!incorrect_feedback_txt[7]!#" />
                 <action do="feedback_txt[#!correct_answer!#]=#!correct_feedback_txt[correct_answer]!#" />
@@ -178,7 +191,7 @@
             <array name="image_1_vars" values="0::0::1000::auto"></array>
         </layer>
         <layer name="layer_question" css_style="layer">
-            <html name="question_txt" x="0" y="0" w="100%" css_style="question_txt">
+            <html name="question_txt" tabindex="0" x="0" y="0" w="100%" css_style="question_txt">
                 <![CDATA[<h3>Scenario 1 of 7</h3><p>You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’ battery life. Where can you add this link so you can quickly open it later in Safari?</p>]]>
             </html>
         </layer>
@@ -189,21 +202,89 @@
         </layer>
               
         <layer name="layer_item" x="0" y="40" w="#!image_width!#" h="#!image_height!#" a="0" css_style="" background_color="transparent" permeable="true" scrollable="false" scroll_w="" scroll_h="">
-            <html name="item_1" x="0" y="19" w="147" h="543" css_style="item item_button" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
-            <html name="item_2" x="228" y="19" w="464" h="252" css_style="item item_button" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
-            <html name="item_3" x="228" y="272" w="464" h="92" css_style="item item_button" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
-            <html name="item_4" x="228" y="365" w="464" h="98" css_style="item item_button" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
-            <html name="item_5" x="228" y="468" w="464" h="94" css_style="item item_button" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
-            <html name="item_6" x="778" y="19" w="222" h="340" css_style="item item_button" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
-            <html name="item_7" x="778" y="360" w="222" h="202" css_style="item item_button" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
-            
-            <html name="button_1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
+            <html name="item_1" x="0" y="19" w="147" h="543" css_style="item item_button" 
+                
+                tabindex="1"
+                onKeyDown="clear_exercise:user_answer=#!current_item_id!#:check_exercise"
+                onMouseEnter="current_item_id=1:mouse_enter" 
+                onMouseLeave="mouse_leave" 
+                onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise">
+                <![CDATA[<notrans></notrans>]]>
+            </html>
+            <html name="item_2" x="228" y="19" w="464" h="252" css_style="item item_button" 
+                onMouseEnter="current_item_id=2:mouse_enter" 
+                onMouseLeave="mouse_leave" 
+                onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise">
+                <![CDATA[<notrans></notrans>]]>
+            </html>
+            <html name="item_3" x="228" y="272" w="464" h="92" css_style="item item_button" 
+                onMouseEnter="current_item_id=3:mouse_enter" 
+                onMouseLeave="mouse_leave" 
+                onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise">
+                <![CDATA[<notrans></notrans>]]>
+            </html>
+            <html name="item_4" x="228" y="365" w="464" h="98" css_style="item item_button" 
+                onMouseEnter="current_item_id=4:mouse_enter" 
+                onMouseLeave="mouse_leave" 
+                onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise">
+                <![CDATA[<notrans></notrans>]]>
+            </html>
+            <html name="item_5" x="228" y="468" w="464" h="94" css_style="item item_button" 
+                onMouseEnter="current_item_id=5:mouse_enter" 
+                onMouseLeave="mouse_leave" 
+                onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise">
+                <![CDATA[<notrans></notrans>]]>
+            </html>
+            <html name="item_6" x="778" y="19" w="222" h="340" css_style="item item_button" 
+                onMouseEnter="current_item_id=6:mouse_enter" 
+                onMouseLeave="mouse_leave" 
+                onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise">
+                <![CDATA[<notrans></notrans>]]>
+            </html>
+            <html name="item_7" x="778" y="360" w="222" h="202" css_style="item item_button" 
+                onMouseEnter="current_item_id=7:mouse_enter" 
+                onMouseLeave="mouse_leave" 
+                onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise">
+                <![CDATA[<notrans></notrans>]]>
+            </html>
+
+
+
+
+
+
+            <html name="button_1" x="5" y="120" w="180" 
+                css_style="blue_button_active pointer-top-left #!button_css[1]!#" 
+                onMouseEnter="current_item_id=1:mouse_enter" 
+                onMouseLeave="mouse_leave" 
+                onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise">
+                <![CDATA[<input type="radio" tabindex="1" aria-label="#!button_txt[1]!#">#!button_txt[1]!#<span class="icon"></span></input>]]>
+            </html>
+            <html name="button_2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" 
+            onMouseEnter="current_item_id=2:mouse_enter" 
+            onMouseLeave="mouse_leave" 
+            onFocus="current_item_id=2:mouse_enter"
+            onKeyDown="clear_exercise:user_answer=#!current_item_id!#:check_exercise"
+            onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise">
+            <![CDATA[<input type="radio" tabindex="2" aria-label="#!button_txt[2]!#">#!button_txt[2]!#<span class="icon"></span></button>]]></html>
+            <html name="button_3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" 
+            onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<button type="button" tabindex="3" aria-label="#!button_txt[3]!#">#!button_txt[3]!#<span class="icon"></span></button>]]></html>
+           
+            <html name="button_4" tabindex="4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" 
+            onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<button type="button" tabindex="4" aria-label="#!button_txt[4]!#">#!button_txt[4]!#<span class="icon"></span></button>]]></html>
+   
+   
+            <html name="button_5" tabindex="5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" 
+            onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<button type="button" tabindex="5" aria-label="#!button_txt[5]!#">#!button_txt[5]!#<span class="icon"></span></button>]]></html>
+   
+            <html name="button_6" tabindex="6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" 
+            onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<button type="button" tabindex="6" aria-label="#!button_txt[6]!#">#!button_txt[6]!#<span class="icon"></span></button>]]></html>
+   
+            <html name="button_7" tabindex="7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" 
+            onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<button type="button" tabindex="7" aria-label="#!button_txt[7]!#">#!button_txt[7]!#<span class="icon"></span></button>]]></html>
+   
+   
+   
         </layer>
         <layer name="layer_feedback" x="0" y="40" w="#!image_width!#" h="#!image_height!#" a="0" css_style="layer_feedback" background_color="transparent" permeable="true" scrollable="false" scroll_w="" scroll_h="">
             <html name="feedback_1" x="180" y="#!image_height!#-10" w="560" h="0" a="100" css_style="feedback_container" refresh=""> 
@@ -229,16 +310,16 @@
             </html>
         </layer>
         <layer name="layer_navigation" a="0">
-            <html name="prev_btn" w="24" h="48" a="100" css_style="nav_btn prev_btn" onClick="previous_slide">
+            <html name="prev_btn" tabindex="8" w="24" h="48" a="100" css_style="nav_btn prev_btn" onClick="previous_slide">
                 <![CDATA[<notrans><svg version="1.1" viewBox="0 0 55 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"><path fill="none" stroke="#0088CC" stroke-width="14" d="M49,95L10,50L49,5"/></svg></notrans>]]>
             </html>
-            <html name="next_btn" w="24" h="48" a="100" css_style="nav_btn next_btn" onClick="next_slide">
+            <html name="next_btn" tabindex="9" w="24" h="48" a="100" css_style="nav_btn next_btn" onClick="next_slide">
                 <![CDATA[<notrans><svg version="1.1" viewBox="0 0 55 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"><path d="M6 5 L45 50 L6 95" stroke="#0088CC" stroke-width="14" fill="none" /></svg></notrans>]]>
             </html>
-            <html name="restart_btn" w="180" a="100" css_style="nav_btn blue_button_active restart_btn" onClick="jump(slide_init)">
+            <html name="restart_btn" tabindex="10" w="180" a="100" css_style="nav_btn blue_button_active restart_btn" onClick="jump(slide_init)">
                 <![CDATA[<notrans>#!restart_btn_txt!#</notrans>]]>
             </html>
-            <html name="final_feedback" x="180" y="15" w="560" a="0" css_style="final_feedback feedback_positive">
+            <html name="final_feedback" tabindex="-1" x="180" y="15" w="560" a="0" css_style="final_feedback feedback_positive">
                 <![CDATA[<notrans>#!final_feedback_txt!#</notrans>]]>
             </html>
         </layer> 
@@ -248,7 +329,7 @@
             <variable name="correct_answer" value="3" />
             <array name="image_1_vars" values="0::0::1000::auto"></array>
         </layer>
-        <layer name="layer_question" css_style="layer">
+        <layer name="layer_question" css_style="layer" tabindex="0">
             <html name="question_txt" x="0" y="0" w="100%" css_style="question_txt">
                 <![CDATA[<h3>Scenario 2 of 7</h3><p>You have three follow-up calls to make to customers. Where can you find a list of your follow-up calls?</p>]]>
             </html>
@@ -268,13 +349,21 @@
             <html name="item_6" x="778" y="19" w="222" h="340" css_style="item item_button" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             <html name="item_7" x="778" y="360" w="222" h="202" css_style="item item_button" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             
-            <html name="button_1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_gov" 
+                tabindex="1"
+                x="5" 
+                y="120" 
+                w="180" 
+                css_style="blue_button_active pointer-top-left #!button_css[1]!#" 
+                onMouseEnter="current_item_id=1:mouse_enter" 
+                onMouseLeave="mouse_leave" 
+                onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_2" tabindex="2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_3" tabindex="3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_4" tabindex="4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_5" tabindex="5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_6" tabindex="6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_7" tabindex="7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
         </layer>
         <layer name="layer_feedback" x="0" y="40" w="#!image_width!#" h="#!image_height!#" a="0" css_style="layer_feedback" background_color="transparent" permeable="true" scrollable="false" scroll_w="" scroll_h="">
             <html name="feedback_1" x="180" y="#!image_height!#-10" w="560" h="0" a="100" css_style="feedback_container" refresh=""> 
@@ -339,13 +428,13 @@
             <html name="item_6" x="778" y="19" w="222" h="340" css_style="item item_button" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             <html name="item_7" x="778" y="360" w="222" h="202" css_style="item item_button" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             
-            <html name="button_1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_1" tabindex="1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_2" tabindex="2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_3" tabindex="3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_4" tabindex="4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_5" tabindex="5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_6" tabindex="6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_7" tabindex="7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
         </layer>
         <layer name="layer_feedback" x="0" y="40" w="#!image_width!#" h="#!image_height!#" a="0" css_style="layer_feedback" background_color="transparent" permeable="true" scrollable="false" scroll_w="" scroll_h="">
             <html name="feedback_1" x="180" y="#!image_height!#-10" w="560" h="0" a="100" css_style="feedback_container" refresh=""> 
@@ -410,13 +499,13 @@
             <html name="item_6" x="778" y="19" w="222" h="340" css_style="item item_button" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             <html name="item_7" x="778" y="360" w="222" h="202" css_style="item item_button" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             
-            <html name="button_1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_1" tabindex="1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_2" tabindex="2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_3" tabindex="3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_4" tabindex="4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_5" tabindex="5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_6" tabindex="6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_7" tabindex="7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
         </layer>
         <layer name="layer_feedback" x="0" y="40" w="#!image_width!#" h="#!image_height!#" a="0" css_style="layer_feedback" background_color="transparent" permeable="true" scrollable="false" scroll_w="" scroll_h="">
             <html name="feedback_1" x="180" y="#!image_height!#-10" w="560" h="0" a="100" css_style="feedback_container" refresh=""> 
@@ -481,13 +570,13 @@
             <html name="item_6" x="778" y="19" w="222" h="340" css_style="item item_button" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             <html name="item_7" x="778" y="360" w="222" h="202" css_style="item item_button" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             
-            <html name="button_1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_1" tabindex="1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_2" tabindex="2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_3" tabindex="3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_4" tabindex="4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_5" tabindex="5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_6" tabindex="6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_7" tabindex="7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
         </layer>
         <layer name="layer_feedback" x="0" y="40" w="#!image_width!#" h="#!image_height!#" a="0" css_style="layer_feedback" background_color="transparent" permeable="true" scrollable="false" scroll_w="" scroll_h="">
             <html name="feedback_1" x="180" y="#!image_height!#-10" w="560" h="0" a="100" css_style="feedback_container" refresh=""> 
@@ -552,13 +641,13 @@
             <html name="item_6" x="778" y="19" w="222" h="340" css_style="item item_button" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             <html name="item_7" x="778" y="360" w="222" h="202" css_style="item item_button" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             
-            <html name="button_1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_1" tabindex="1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_2" tabindex="2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_3" tabindex="3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_4" tabindex="4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_5" tabindex="5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_6" tabindex="6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_7" tabindex="7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
         </layer>
         <layer name="layer_feedback" x="0" y="40" w="#!image_width!#" h="#!image_height!#" a="0" css_style="layer_feedback" background_color="transparent" permeable="true" scrollable="false" scroll_w="" scroll_h="">
             <html name="feedback_1" x="180" y="#!image_height!#-10" w="560" h="0" a="100" css_style="feedback_container" refresh=""> 
@@ -623,13 +712,13 @@
             <html name="item_6" x="778" y="19" w="222" h="340" css_style="item item_button" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             <html name="item_7" x="778" y="360" w="222" h="202" css_style="item item_button" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans></notrans>]]></html>
             
-            <html name="button_1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
-            <html name="button_7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_1" tabindex="1" x="5" y="120" w="180" css_style="blue_button_active pointer-top-left #!button_css[1]!#" onMouseEnter="current_item_id=1:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[1]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_2" tabindex="2" x="228" y="-15" w="180" css_style="blue_button_active pointer-bottom-left #!button_css[2]!#" onMouseEnter="current_item_id=2:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[2]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_3" tabindex="3" x="35" y="270" w="180" css_style="blue_button_active pointer-right #!button_css[3]!#" onMouseEnter="current_item_id=3:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[3]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_4" tabindex="4" x="35" y="365" w="180" css_style="blue_button_active pointer-right #!button_css[4]!#" onMouseEnter="current_item_id=4:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[4]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_5" tabindex="5" x="35" y="468" w="180" css_style="blue_button_active pointer-right #!button_css[5]!#" onMouseEnter="current_item_id=5:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[5]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_6" tabindex="6" x="788" y="180" w="200" css_style="blue_button_active pointer-top-left #!button_css[6]!#" onMouseEnter="current_item_id=6:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[6]!#<span class="icon"></span></notrans>]]></html>
+            <html name="button_7" tabindex="7" x="788" y="316" w="200" css_style="blue_button_active pointer-bottom-left #!button_css[7]!#" onMouseEnter="current_item_id=7:mouse_enter" onMouseLeave="mouse_leave" onClick="clear_exercise:user_answer=#!current_item_id!#:check_exercise"><![CDATA[<notrans>#!button_txt[7]!#<span class="icon"></span></notrans>]]></html>
         </layer>
         <layer name="layer_feedback" x="0" y="40" w="#!image_width!#" h="#!image_height!#" a="0" css_style="layer_feedback" background_color="transparent" permeable="true" scrollable="false" scroll_w="" scroll_h="">
             <html name="feedback_1" x="180" y="#!image_height!#-10" w="560" h="0" a="100" css_style="feedback_container" refresh=""> 

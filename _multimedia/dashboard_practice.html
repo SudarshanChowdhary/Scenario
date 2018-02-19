@@ -10,10 +10,11 @@
     <meta name="page" content=" " mark_complete="false">
 <link href="jsxml_knowledge_check_dashboard/engine/style.css" media="screen, projection" rel="stylesheet" type="text/css"/>
 </head>
+
 <body>
     <main>
         <!-- BEGIN PAGE CONTENT -->
-        <section>
+        <section  style="display:none">
             <div>
                 <h3>Scenario 1 of 7</h3>
                 <p>You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’
@@ -21,7 +22,8 @@
             </div>
             <ul>
                 <li>
-                    <input class="button_1 blue_button_active pointer-top-left false" style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1; pointer-events: auto;"
+                    <input class="button_1 blue_button_active pointer-top-left false" 
+                    style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1; pointer-events: auto;"
                         type="radio" name="My Links" value="My Links">My Links</li>
                 <li>
                     <input type="radio" name="" value="Needs Attention">Needs Attention</li>
@@ -208,10 +210,11 @@
                 <button>Previous </button>
             </div>
         </section>
-        <div class="img-sec" style="position:relative">
-            <div>
+        <div class="img-sec" style="position:relative;">
+           
         <img src="jsxml_knowledge_check_dashboard/images/dashboard_01.png"/>
-            </div>
+        </div>
+          <div> 
             <!-- my link -->
             <div class="my-link"></div>
             <!-- Need Attention -->
@@ -227,13 +230,60 @@
             <!-- My Handled class -->
             <div class="my-handled"></div>
         </div>
-        <div class="button_1 blue_button_active pointer-top-left false">My Links</div>
-        <div class="button_2 blue_button_active pointer-bottom-left false">Needs Attention</div>
-        <div class="button_3 blue_button_active pointer-right incorrect">My Commitments</div>
-        <div class="button_4 blue_button_active pointer-right incorrect">Recently Published</div>
-        <div class="button_6 blue_button_active pointer-top-left false">Emerging Issues</div>
-        <div class="button_7 blue_button_active pointer-bottom-left false">My Handled Cases</div>
+
+        <section class="questions" id="s1">
+                <div>
+                    <h3>Scenario 1 of 7</h3>
+                    <p>You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’
+                        battery life. Where can you add this link so you can quickly open it later in Safari?</p>
+                </div>
+        <ul>
+       <li> <div class="button_1 blue_button_active pointer-top-left false">
+
+       <label class="button" for="My-Link">My Link</label>
+       <input type="radio" id="My-Link" name="" class="a11y" value="My Link" onclick="RadioClickFn();" /></div></li>
+
+      <li>  <div class="button_2 blue_button_active pointer-bottom-left false">
+
+        <label class="button" for="Needs-Attention">Needs Attention</label>
+        <input type="radio" id="Needs-Attention" name="" class="a11y" value="Needs Attention" onclick="RadioClickFn();" /></div></li>
+          
+    </li>
+      <li>  <div class="button_3 blue_button_active pointer-right incorrect">
+        
+            <label class="button" for="My-Commitments">My Commitments</label>
+            <input type="radio" id="My-Commitments" name="" class="a11y" value="My Commitments" onclick="RadioClickFn();" /></div></li>
+        
+       
+      <li>  <div class="button_4 blue_button_active pointer-right incorrect">
+
+            <label class="button" for="Recently-Publisheds">Recently Publisheds</label>
+            <input type="radio" id="Recently-Publisheds" name="" class="a11y" value="Recently Published" onclick="RadioClickFn();"/></div></li>
+
+        <li>  <div class=" button_5 blue_button_active pointer-right incorrect">
+                    
+            <label class="button" for="AppleLearn">AppleLearn</label>
+            <input type="radio" id="AppleLearn" name="" class="a11y" value="AppleLearn" onclick="RadioClickFn();" /></div></li>
+          
+       
+      <li>  <div class="button_6 blue_button_active pointer-top-left false">
+          
+            <label class="button" for="Emerging-Issues">Emerging Issues</label>
+            <input type="radio" id="Emerging-Issues" name="" class="a11y" value="Emerging Issues" onclick="RadioClickFn();" /></div></li>
+        
+        
+      <li>  <div class="button_7 blue_button_active pointer-bottom-left false">
+
+
+            <label class="button" for="My-HandledCases">My Handled Cases</label>
+            <input type="radio" id="My-HandledCases" name="" class="a11y" value="My Handled Cases" onclick="RadioClickFn();" /></div></li>
+        </section>
+        </ul>
         <!-- END PAGE CONTENT -->
     </main>
+    <script type="text/javascript" src="jsxml_knowledge_check_dashboard/style.js">
+    
+    </script>    
 </body>
 </html>
+
