@@ -13,7 +13,7 @@
           if(i==slides[0].correctAns){
             $(this).addClass("correct");
             $(".feedback_container").removeClass('show');
-  					$(".feedback_" + (i + 1)).addClass('show');
+  			$(".feedback_" + (i + 1)).addClass('show');
             $(".feedback_" + (i + 1)).addClass('correct');
             $(".feedback_" + (i + 1)).prop("tabindex", i+2);
 			$(".button_" + (i + 2)).css("pointer-events", "none !important");
@@ -23,7 +23,7 @@
           }else{
             $(this).addClass("incorrect");
             $(".feedback_container").removeClass('show');
-  					$(".feedback_" + (i + 1)).addClass('show');
+  			$(".feedback_" + (i + 1)).addClass('show');
 			$(".feedback_" + (i + 1)).addClass('incorrect');
             $(".feedback_" + (i + 1)).prop("tabindex", i+2);			
             $(".feedback_" + (i + 1)).focus();
@@ -41,12 +41,12 @@
 		<div id="interaction" style="height: 780px; width: 1000px; background-color: transparent;">
 			<div class="layer_question layer" style="pointer-events: auto;">
 				<div class="question_txt">
-					<h3 tabindex="1" aria-label="Scenario 1 of 7">Scenario 1 of 7</h3>
-					<h4 tabindex="1" aria-label="You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’ battery life. Where can you add this link so you can quickly open it later in Safari?">You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’ battery life. Where can you add this link so you can quickly open it later in Safari?</h4>
+					<h3>Scenario 1 of 7</h3>
+					<p>You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’ battery life. Where can you add this link so you can quickly open it later in Safari?</p>
 				</div>
 			</div>
 			<div class="layer_image layer" style="position: absolute; left: 0px; top: 90px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;">
-				<img class="bg_image" src="images/dashboard_01.png" style="position: absolute; left: 0px; top: 0px; width: 1000px; opacity: 1; pointer-events: none;">
+				<img class="bg_image" aria-hidden="true" src="images/dashboard_01.png" style="position: absolute; left: 0px; top: 0px; width: 1000px; opacity: 1; pointer-events: none;">
 			</div>
 			<div id="button_layer" class="layer_item" style="position: absolute; left: 0px; top: 200px; width: 1000px; height: 662px; opacity: 1; background-color: transparent; overflow: hidden;">
 				<div class="item_1 item item_button" style="position: absolute; left: 0px; top: 19px; width: 147px; height: 543px; opacity: 1;">
@@ -64,63 +64,64 @@
 				<div class="item_7 item item_button" style="position: absolute; left: 778px; top: 360px; width: 222px; height: 202px; opacity: 1;">
 				</div>
 
-				<button tabindex="2" aria-label="My Links" class="button_1 blue_button_active pointer-top-left" answer="true" style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1;">
-					My Links
+				<label for="My-Links" class="button_1 blue_button_active pointer-top-left" data-answer="true" style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1;">My Links</label>
+				<input type="radio" name="answers" id="My-Links" >
+				
 					<span class="icon"></span>
-				</button>
-				<button tabindex="3" aria-label="Needs Attention" class="button_2 blue_button_active pointer-bottom-left" style="position: absolute; left: 228px; top: -15px; width: 180px; opacity: 1;">
-					Needs Attention
+				<label for="Needs-Attention" class="button_2 blue_button_active pointer-bottom-left" style="position: absolute; left: 228px; top: -15px; width: 180px; opacity: 1;">Needs Attention</label>
+				<input type="radio" name="answers" id="Needs-Attention" >
+					
 					<span class="icon"></span>
-				</button>
-				<button tabindex="4" aria-label="My Commitments" class="button_3 blue_button_active pointer-right" style="position: absolute; left: 35px; top: 270px; width: 180px; opacity: 1;">
-					My Commitments
+				<label for="My-Commitments" class="button_3 blue_button_active pointer-right" style="position: absolute; left: 35px; top: 270px; width: 180px; opacity: 1;">My Commitments</label>
+				<input type="radio" name="answers" id="My-Commitments" >
+					
 					<span class="icon"></span>
-				</button>
-				<button tabindex="5" aria-label="Recently Published" class="button_4 blue_button_active pointer-right" style="position: absolute; left: 35px; top: 365px; width: 180px; opacity: 1;">
-					Recently Published
+				<label for="Recently-Published" class="button_4 blue_button_active pointer-right" style="position: absolute; left: 35px; top: 365px; width: 180px; opacity: 1;">Recently Published</label>
+				<input type="radio" name="answers" id="Recently-Published" >
+					
 					<span class="icon"></span>
-				</button>
-				<button tabindex="6" aria-label="AppleLearn" class="button_5 blue_button_active pointer-right" style="position: absolute; left: 35px; top: 468px; width: 180px; opacity: 1;">
-					AppleLearn
+				<label for="AppleLearn" class="button_5 blue_button_active pointer-right" style="position: absolute; left: 35px; top: 468px; width: 180px; opacity: 1;">AppleLearn</label>
+				<input type="radio" name="answers" id="AppleLearn" >
+					
 					<span class="icon"></span>
-				</button>
-				<button tabindex="7" aria-label="Emerging Issues" class="button_6 blue_button_active pointer-top-left" style="position: absolute; left: 788px; top: 180px; width: 200px; opacity: 1;">
-					Emerging Issues
+				<label for="Emerging-Issues" class="button_6 blue_button_active pointer-top-left" style="position: absolute; left: 788px; top: 180px; width: 200px; opacity: 1;">Emerging Issues</label>
+				<input type="radio" name="answers" id="Emerging-Issues" >
+					
 					<span class="icon"></span>
-				</button>
-				<button tabindex="8" aria-label="My Handled Cases" class="button_7 blue_button_active pointer-bottom-left" style="position: absolute; left: 788px; top: 316px; width: 200px; opacity: 1;">
-					My Handled Cases
+				<label for="My-Handled" class="button_7 blue_button_active pointer-bottom-left" style="position: absolute; left: 788px; top: 316px; width: 200px; opacity: 1;">MyHandled Case</label>
+				<input type="radio" name="answers" id="My-Handled" >
+				
 					<span class="icon"></span>
-				</button>
+				
 			</div>
 			<div class="layer_feedback">
-				<div class="feedback_1 feedback_container" aria-label="Correct! You use the My Links section to save your frequently used links. Remember, you can add and remove links and organize links using folders.">
+				<div class="feedback_1 feedback_container">
 					<div class="feedback valign-bottom" >Correct! You use the My Links section to save your frequently used links. Remember, you can add and remove links and organize links using folders.
 					</div>
 				</div>
-				<div class="feedback_2 feedback_container" aria-label="The Needs Attention section lists Bullet*News articles.">
+				<div class="feedback_2 feedback_container">
 					<div class="feedback valign-bottom" >The Needs Attention section lists Bullet*News articles.
 					</div>
 
 				</div>
-				<div class="feedback_3 feedback_container" aria-label="The My Commitments section lists your callbacks and follow-ups." >
+				<div class="feedback_3 feedback_container" >
 					<div class="feedback valign-bottom">The My Commitments section lists your callbacks and follow-ups.</div>
 				</div>
 				<div class="feedback_4 feedback_container" aria-label="The Recently Published section lists SOPs, non-urgent Bullet*News, and ISCS content." >
 					<div class="feedback valign-bottom">The Recently Published section lists SOPs, non-urgent Bullet*News, and ISCS content.</div>
 
 				</div>
-				<div class="feedback_5 feedback_container" aria-label="The AppleLearn section lists new, pending, and overdue training." >
+				<div class="feedback_5 feedback_container"  >
 					<div class="feedback valign-bottom">The AppleLearn section lists new, pending, and overdue training.</div>
 				</div>
-				<div class="feedback_6 feedback_container" aria-label="The Emerging Issues section lists articles related to issues Engineering is tracking." >
+				<div class="feedback_6 feedback_container" >
 					<div class="feedback valign-bottom">The Emerging Issues section lists articles related to issues Engineering is tracking.</div>
 				</div>
-				<div class="feedback_7 feedback_container" aria-label="The My Handled Cases section lists cases you handled within the last 24 hours." >
+				<div class="feedback_7 feedback_container" >
 					<div class="feedback valign-bottom">The My Handled Cases section lists cases you handled within the last 24 hours.</div>
 				</div>
 			</div>
-			<div class="layer_navigation" style="position: absolute; left: 0px;  aria-label="" top: 900px; width: 100%; opacity: 1; pointer-events: auto; overflow: hidden;">
+			<div class="layer_navigation" style="position: absolute; left: 0px; top: 900px; width: 100%; opacity: 1; pointer-events: auto; overflow: hidden;">
 				<div class="prev_btn nav_btn" aria-label="Previous Slide"  style="position: absolute; left: 0px; top: 0px; width: 24px; height: 48px; opacity: 1;">
 					<svg version="1.1" viewBox="0 0 55 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
                             <path fill="none" stroke="#0088CC" stroke-width="14" d="M49, aria-label="" 95L10,50L49,5"></path>

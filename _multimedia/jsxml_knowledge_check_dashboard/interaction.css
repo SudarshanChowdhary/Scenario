@@ -299,13 +299,13 @@
 }
 
 .feedback_container {
-    opacity: 0 !important;
+   display: none;
     pointer-events: none !important;
     transition: opacity .3s ease-out;
 }
 
 .show.feedback_container {
-    opacity: 1 !important;
+    display: none;
     z-index: 10;
 }
 
