@@ -1,289 +1,306 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="AppleCare Training authored this course. If you use this course outside the AppleCare Training site, give credit to its author.">
-    <!-- If you are using an interaction to mark the page complete, change mark_complete to false -->
-    <!-- If this is an MSCO page, use 'msco_true' or 'msco_false' for the mark_complete. msco_true will trigger mark complete on the last section. Use msco_false for MSCOs with a required interaction. -->
-    <meta name="template_version" content="01.05.2015">
-    <meta name="page" content=" " mark_complete="false">
-<link href="jsxml_knowledge_check_dashboard/engine/style.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+	<meta charset="UTF-8">
+	<meta name="description" content="AppleCare Training authored this course. If you use this course outside the AppleCare Training site, give credit to its author.">
+	<!-- If you are using an interaction to mark the page complete, change mark_complete to false -->
+	<!-- If this is an MSCO page, use 'msco_true' or 'msco_false' for the mark_complete. msco_true will trigger mark complete on the last section. Use msco_false for MSCOs with a required interaction. -->
+	<meta name="template_version" content="01.05.2015">
+	<meta name="page" content=" " mark_complete="false">
+	<link href="jsxml_knowledge_check_dashboard/engine/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <main>
-        <!-- BEGIN PAGE CONTENT -->
-        <section  style="display:none">
-            <div>
-                <h3>Scenario 1 of 7</h3>
-                <p>You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’
-                    battery life. Where can you add this link so you can quickly open it later in Safari?</p>
-            </div>
-            <ul>
-                <li>
-                    <input class="button_1 blue_button_active pointer-top-left false" 
-                    style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1; pointer-events: auto;"
-                        type="radio" name="My Links" value="My Links">My Links</li>
-                <li>
-                    <input type="radio" name="" value="Needs Attention">Needs Attention</li>
-                <li>
-                    <input type="radio" name="" value="My Commitments">My Commitments</li>
-                <li>
-                    <input type="radio" name="" value="Recently Published">Recently Published</li>
-                <li>
-                    <input type="radio" name="" value="AppleLearn">AppleLearn</li>
-                <li>
-                    <input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
-                <li>
-                    <input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
+	<main>
+		<!-- BEGIN PAGE CONTENT -->
+		<section style="display:none">
+			<div>
+				<h3>Scenario 1 of 7</h3>
+				<p>You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’ battery life. Where can you add this link so you can quickly open it later in Safari?</p>
+			</div>
+			<ul style="display: none;">
+				<li>
+					<input class="button_1 blue_button_active pointer-top-left " style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1; pointer-events: auto;" type="radio" name="My Links" value="My Links">My Links</li>
+				<li>
+					<input type="radio" name="" value="Needs Attention">Needs Attention</li>
+				<li>
+					<input type="radio" name="" value="My Commitments">My Commitments</li>
+				<li>
+					<input type="radio" name="" value="Recently Published">Recently Published</li>
+				<li>
+					<input type="radio" name="" value="AppleLearn">AppleLearn</li>
+				<li>
+					<input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
+				<li>
+					<input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
 
-                <label class="button" for="dd">My Link</label>
-                <input type="radio" id="dd" name="" class="a11y" value="My Handled Cases" />
+				<label class="button" for="dd">My Link</label>
+				<input type="radio" id="dd" name="" class="a11y" value="My Handled Cases" />
 
-                <input class="a11y" type="radio" name="appointments" id="mine" checked="" />
-                <label for="mine" class="btn">Mine</label>
+				<input class="a11y" type="radio" name="appointments" id="mine" checked="" />
+				<label for="mine" class="btn">Mine</label>
 
-                <input class="a11y" type="radio" name="appointments" id="all" />
-                <label for="all" class="btn">All</label>
+				<input class="a11y" type="radio" name="appointments" id="all" />
+				<label for="all" class="btn">All</label>
 
-            </ul>
-        </section>
-        <section style="display:none">
-            <div>
-                <h3>Scenario 2 of 7</h3>
-                <p>You have three follow-up calls to make to customers. Where can you find a list of your follow-up calls?</p>
-            </div>
-            <ul>
-                <li>
-                    <input type="radio" name="" value="My Links">My Links</li>
-                <li>
-                    <input type="radio" name="" value="Needs Attention">Needs Attention</li>
-                <li>
-                    <input type="radio" name="My Commitments" value="My Commitments">My Commitments</li>
-                <li>
-                    <input type="radio" name="" value="Recently Published">Recently Published</li>
-                <li>
-                    <input type="radio" name="" value="AppleLearn">AppleLearn</li>
-                <li>
-                    <input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
-                <li>
-                    <input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
-            </ul>
-            <div>
-                <button>Next </button>
-                <button>Previous </button>
-            </div>
-        </section>
-        <section style="display:none">
-            <div>
-                <h3>Scenario 3 of 7</h3>
-                <p>You are about to set your AUX state to Available, but you can't get to Case View. Which section do you need
-                    to review before you can start working with customers?</p>
-            </div>
-            <ul>
-                <li>
-                    <input type="radio" name="" value="My Links">My Links</li>
-                <li>
-                    <input type="radio" name="Needs Attention" value="Needs Attention">Needs Attention</li>
-                <li>
-                    <input type="radio" name="" value="My Commitments">My Commitments</li>
-                <li>
-                    <input type="radio" name="" value="Recently Published">Recently Published</li>
-                <li>
-                    <input type="radio" name="" value="AppleLearn">AppleLearn</li>
-                <li>
-                    <input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
-                <li>
-                    <input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
-            </ul>
-            <div>
-                <button>Next </button>
-                <button>Previous </button>
-            </div>
-        </section>
-        <section style="display:none">
-            <div>
-                <h3>Scenario 4 of 7</h3>
-                <p>Your teammate just informed you of a new procedure that was just published. In which section can you find
-                    the new procedure? </p>
-            </div>
-            <ul>
-                <li>
-                    <input type="radio" name="" value="My Links">My Links</li>
-                <li>
-                    <input type="radio" name="" value="Needs Attention">Needs Attention</li>
-                <li>
-                    <input type="radio" name="" value="My Commitments">My Commitments</li>
-                <li>
-                    <input type="radio" name="Recently Published" value="Recently Published">Recently Published</li>
-                <li>
-                    <input type="radio" name="" value="AppleLearn">AppleLearn</li>
-                <li>
-                    <input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
-                <li>
-                    <input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
-            </ul>
-            <div>
-                <button>Next </button>
-                <button>Previous </button>
-            </div>
-        </section>
-        <section style="display:none">
-            <div>
-                <h3>Scenario 5 of 7</h3>
-                <p>After the new iPhone release, Engineering published an article to help Advisors resolve an issue that Apple
-                    is tracking. In which section can you find this article?</p>
-            </div>
-            <ul>
-                <li>
-                    <input type="radio" name="" value="My Links">My Links</li>
-                <li>
-                    <input type="radio" name="" value="Needs Attention">Needs Attention</li>
-                <li>
-                    <input type="radio" name="" value="My Commitments">My Commitments</li>
-                <li>
-                    <input type="radio" name="" value="Recently Published">Recently Published</li>
-                <li>
-                    <input type="radio" name="" value="AppleLearn">AppleLearn</li>
-                <li>
-                    <input type="radio" name="Emerging Issues" value="Emerging Issues">Emerging Issues</li>
-                <li>
-                    <input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
-            </ul>
-            <div>
-                <button>Next </button>
-                <button>Previous </button>
-            </div>
-        </section>
-        <section style="display:none">
-            <div>
-                <h3>Scenario 6 of 7</h3>
-                <p>Your manager wants to review a case with you that you handled yesterday. Which section can you use to quickly
-                    locate the case in iLog?</p>
-            </div>
-            <ul>
-                <li>
-                    <input type="radio" name="" value="My Links">My Links</li>
-                <li>
-                    <input type="radio" name="" value="Needs Attention">Needs Attention</li>
-                <li>
-                    <input type="radio" name="" value="My Commitments">My Commitments</li>
-                <li>
-                    <input type="radio" name="" value="Recently Published">Recently Published</li>
-                <li>
-                    <input type="radio" name="" value="AppleLearn">AppleLearn</li>
-                <li>
-                    <input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
-                <li>
-                    <input type="radio" name=" My Handled Cases" value="My Handled Cases">My Handled Cases</li>
-            </ul>
-            <div>
-                <button>Next </button>
-                <button>Previous </button>
-            </div>
-        </section>
-        <section style="display:none">
-            <div>
-                <h3>Scenario 7 of 7</h3>
-                <p>Your manager asked you to determine whether you have any overdue training. Which section of Dashboard can
-                    you use to locate this information?</p>
-            </div>
-            <ul>
-                <li>
-                    <input type="radio" name="" value="My Links">My Links</li>
-                <li>
-                    <input type="radio" name="" value="Needs Attention">Needs Attention</li>
-                <li>
-                    <input type="radio" name="" value="My Commitments">My Commitments</li>
-                <li>
-                    <input type="radio" name="" value="Recently Published">Recently Published</li>
-                <li>
-                    <input type="radio" name="AppleLearn" value="AppleLearn">AppleLearn</li>
-                <li>
-                    <input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
-                <li>
-                    <input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
-            </ul>
-            <div>
-                <button>Next </button>
-                <button>Previous </button>
-            </div>
-        </section>
-        <div class="img-sec" style="position:relative;">
-           
-        <img src="jsxml_knowledge_check_dashboard/images/dashboard_01.png"/>
-        </div>
-          <div> 
-            <!-- my link -->
-            <div class="my-link"></div>
-            <!-- Need Attention -->
-            <div class="need-attention"></div>
-            <!-- My Commitments -->
-            <div class="my-commitments"></div>
-            <!-- My published -->
-            <div class="my-published"></div>
-            <!-- AppleLearn -->
-            <div class="applelearn"></div>
-            <!-- Emerging Issues -->
-            <div class="emerging-issues"></div>
-            <!-- My Handled class -->
-            <div class="my-handled"></div>
-        </div>
+			</ul>
+		</section>
+		<section style="display:none">
+			<div>
+				<h3>Scenario 2 of 7</h3>
+				<p>You have three follow-up calls to make to customers. Where can you find a list of your follow-up calls?</p>
+			</div>
+			<ul>
+				<li>
+					<input type="radio" name="" value="My Links">My Links</li>
+				<li>
+					<input type="radio" name="" value="Needs Attention">Needs Attention</li>
+				<li>
+					<input type="radio" name="My Commitments" value="My Commitments">My Commitments</li>
+				<li>
+					<input type="radio" name="" value="Recently Published">Recently Published</li>
+				<li>
+					<input type="radio" name="" value="AppleLearn">AppleLearn</li>
+				<li>
+					<input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
+				<li>
+					<input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
+			</ul>
+			<div>
+				<button>Next </button>
+				<button>Previous </button>
+			</div>
+		</section>
+		<section style="display:none">
+			<div>
+				<h3>Scenario 3 of 7</h3>
+				<p>You are about to set your AUX state to Available, but you can't get to Case View. Which section do you need to review before you can start working with customers?</p>
+			</div>
+			<ul>
+				<li>
+					<input type="radio" name="" value="My Links">My Links</li>
+				<li>
+					<input type="radio" name="Needs Attention" value="Needs Attention">Needs Attention</li>
+				<li>
+					<input type="radio" name="" value="My Commitments">My Commitments</li>
+				<li>
+					<input type="radio" name="" value="Recently Published">Recently Published</li>
+				<li>
+					<input type="radio" name="" value="AppleLearn">AppleLearn</li>
+				<li>
+					<input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
+				<li>
+					<input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
+			</ul>
+			<div>
+				<button>Next </button>
+				<button>Previous </button>
+			</div>
+		</section>
+		<section style="display:none">
+			<div>
+				<h3>Scenario 4 of 7</h3>
+				<p>Your teammate just informed you of a new procedure that was just published. In which section can you find the new procedure? </p>
+			</div>
+			<ul>
+				<li>
+					<input type="radio" name="" value="My Links">My Links</li>
+				<li>
+					<input type="radio" name="" value="Needs Attention">Needs Attention</li>
+				<li>
+					<input type="radio" name="" value="My Commitments">My Commitments</li>
+				<li>
+					<input type="radio" name="Recently Published" value="Recently Published">Recently Published</li>
+				<li>
+					<input type="radio" name="" value="AppleLearn">AppleLearn</li>
+				<li>
+					<input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
+				<li>
+					<input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
+			</ul>
+			<div>
+				<button>Next </button>
+				<button>Previous </button>
+			</div>
+		</section>
+		<section style="display:none">
+			<div>
+				<h3>Scenario 5 of 7</h3>
+				<p>After the new iPhone release, Engineering published an article to help Advisors resolve an issue that Apple is tracking. In which section can you find this article?</p>
+			</div>
+			<ul>
+				<li>
+					<input type="radio" name="" value="My Links">My Links</li>
+				<li>
+					<input type="radio" name="" value="Needs Attention">Needs Attention</li>
+				<li>
+					<input type="radio" name="" value="My Commitments">My Commitments</li>
+				<li>
+					<input type="radio" name="" value="Recently Published">Recently Published</li>
+				<li>
+					<input type="radio" name="" value="AppleLearn">AppleLearn</li>
+				<li>
+					<input type="radio" name="Emerging Issues" value="Emerging Issues">Emerging Issues</li>
+				<li>
+					<input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
+			</ul>
+			<div>
+				<button>Next </button>
+				<button>Previous </button>
+			</div>
+		</section>
+		<section style="display:none">
+			<div>
+				<h3>Scenario 6 of 7</h3>
+				<p>Your manager wants to review a case with you that you handled yesterday. Which section can you use to quickly locate the case in iLog?</p>
+			</div>
+			<ul>
+				<li>
+					<input type="radio" name="" value="My Links">My Links</li>
+				<li>
+					<input type="radio" name="" value="Needs Attention">Needs Attention</li>
+				<li>
+					<input type="radio" name="" value="My Commitments">My Commitments</li>
+				<li>
+					<input type="radio" name="" value="Recently Published">Recently Published</li>
+				<li>
+					<input type="radio" name="" value="AppleLearn">AppleLearn</li>
+				<li>
+					<input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
+				<li>
+					<input type="radio" name=" My Handled Cases" value="My Handled Cases">My Handled Cases</li>
+			</ul>
+			<div>
+				<button>Next </button>
+				<button>Previous </button>
+			</div>
+		</section>
+		<section style="display:none">
+			<div>
+				<h3>Scenario 7 of 7</h3>
+				<p>Your manager asked you to determine whether you have any overdue training. Which section of Dashboard can you use to locate this information?</p>
+			</div>
+			<ul>
+				<li>
+					<input type="radio" name="" value="My Links">My Links</li>
+				<li>
+					<input type="radio" name="" value="Needs Attention">Needs Attention</li>
+				<li>
+					<input type="radio" name="" value="My Commitments">My Commitments</li>
+				<li>
+					<input type="radio" name="" value="Recently Published">Recently Published</li>
+				<li>
+					<input type="radio" name="AppleLearn" value="AppleLearn">AppleLearn</li>
+				<li>
+					<input type="radio" name="" value="Emerging Issues">Emerging Issues</li>
+				<li>
+					<input type="radio" name="" value="My Handled Cases">My Handled Cases</li>
+			</ul>
+			<div>
+				<button>Next </button>
+				<button>Previous </button>
+			</div>
+		</section>
+		<div class="img-sec" style="position:relative;">
+			<img src="jsxml_knowledge_check_dashboard/images/dashboard_01.png" />
+		</div>
+		<div style="position:absolute; top: 100px;">
+			<!-- my link -->
+			<div class="my-link"></div>
+			<!-- Need Attention -->
+			<div class="need-attention"></div>
+			<!-- My Commitments -->
+			<div class="my-commitments"></div>
+			<!-- My published -->
+			<div class="my-published"></div>
+			<!-- AppleLearn -->
+			<div class="applelearn"></div>
+			<!-- Emerging Issues -->
+			<div class="emerging-issues"></div>
+			<!-- My Handled class -->
+			<div class="my-handled"></div>
+		</div>
 
-        <section class="questions" id="s1">
-                <div>
-                    <h3>Scenario 1 of 7</h3>
-                    <p>You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’
-                        battery life. Where can you add this link so you can quickly open it later in Safari?</p>
-                </div>
-        <ul>
-       <li> <div class="button_1 blue_button_active pointer-top-left false">
-
-       <label class="button" for="My-Link">My Link</label>
-       <input type="radio" id="My-Link" name="" class="a11y" value="My Link" onclick="RadioClickFn();" /></div></li>
-
-      <li>  <div class="button_2 blue_button_active pointer-bottom-left false">
-
-        <label class="button" for="Needs-Attention">Needs Attention</label>
-        <input type="radio" id="Needs-Attention" name="" class="a11y" value="Needs Attention" onclick="RadioClickFn();" /></div></li>
-          
-    </li>
-      <li>  <div class="button_3 blue_button_active pointer-right incorrect">
-        
-            <label class="button" for="My-Commitments">My Commitments</label>
-            <input type="radio" id="My-Commitments" name="" class="a11y" value="My Commitments" onclick="RadioClickFn();" /></div></li>
-        
-       
-      <li>  <div class="button_4 blue_button_active pointer-right incorrect">
-
-            <label class="button" for="Recently-Publisheds">Recently Publisheds</label>
-            <input type="radio" id="Recently-Publisheds" name="" class="a11y" value="Recently Published" onclick="RadioClickFn();"/></div></li>
-
-        <li>  <div class=" button_5 blue_button_active pointer-right incorrect">
-                    
-            <label class="button" for="AppleLearn">AppleLearn</label>
-            <input type="radio" id="AppleLearn" name="" class="a11y" value="AppleLearn" onclick="RadioClickFn();" /></div></li>
-          
-       
-      <li>  <div class="button_6 blue_button_active pointer-top-left false">
-          
-            <label class="button" for="Emerging-Issues">Emerging Issues</label>
-            <input type="radio" id="Emerging-Issues" name="" class="a11y" value="Emerging Issues" onclick="RadioClickFn();" /></div></li>
-        
-        
-      <li>  <div class="button_7 blue_button_active pointer-bottom-left false">
-
-
-            <label class="button" for="My-HandledCases">My Handled Cases</label>
-            <input type="radio" id="My-HandledCases" name="" class="a11y" value="My Handled Cases" onclick="RadioClickFn();" /></div></li>
-        </section>
-        </ul>
-        <!-- END PAGE CONTENT -->
-    </main>
-    <script type="text/javascript" src="jsxml_knowledge_check_dashboard/style.js">
-    
-    </script>    
+		<section id="s1">
+			<div class="question">
+				<h3>Scenario 1 of 7</h3>
+				  <p>You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’ battery life. Where can you add this link so you can quickly open it later in Safari?</p>
+			</div>
+			<div class="options" style="position:relative;">
+				<div class="button_1 blue_button_active pointer-top-left ">
+					<label for="My-Link">My Link</label>
+					<input type="button" id="My-Link" name="" class="a11y" value="My Link" onclick="RadioClickFn('feedback_1');" />
+				</div>
+				<div class="button_2 blue_button_active pointer-bottom-left ">
+					<label for="Needs-Attention">Needs Attention</label>
+					<input type="button" id="Needs-Attention" name="" class="a11y" value="Needs Attention" onclick="RadioClickFn();" />
+				</div>
+				<div class="button_3 blue_button_active pointer-right">
+					<label class="button" for="My-Commitments">My Commitments</label>
+					<input type="button" id="My-Commitments" name="" class="a11y" value="My Commitments" onclick="RadioClickFn();" />
+				</div>
+				<div class="button_4 blue_button_active pointer-right">
+					<label class="button" for="Recently-Publisheds">Recently Publisheds</label>
+					<input type="button" id="Recently-Publisheds" name="" class="a11y" value="Recently Published" onclick="RadioClickFn();" />
+				</div>
+				<div class=" button_5 blue_button_active pointer-right">
+					<label class="button" for="AppleLearn">AppleLearn</label>
+					<input type="button" id="AppleLearn" name="" class="a11y" value="AppleLearn" onclick="RadioClickFn();" />
+				</div>
+				<div class="button_6 blue_button_active pointer-top-left ">
+					<label class="button" for="Emerging-Issues">Emerging Issues</label>
+					<input type="button" id="Emerging-Issues" name="" class="a11y" value="Emerging Issues" onclick="RadioClickFn();" />
+				</div>
+				<div class="button_7 blue_button_active pointer-bottom-left ">
+					<label class="button" for="My-HandledCases">My Handled Cases</label>
+					<input type="button" id="My-HandledCases" name="" class="a11y" value="My Handled Cases" onclick="RadioClickFn();" />
+				</div>
+			</div>
+		</section>
+		<div class="layer_feedback">
+			<div class="feedback_1 feedback_container">
+				<div class="feedback valign-bottom">Correct! You use the My Links section to save your frequently used links. Remember, you can add and remove links and organize links using folders.</div>
+			</div>
+			<div class="feedback_2 feedback_container">
+				<div class="feedback valign-bottom">The Needs Attention section lists Bullet*News articles.</div>
+			</div>
+			<div class="feedback_3 feedback_container">
+				<div class="feedback valign-bottom">The My Commitments section lists your callbacks and follow-ups.</div>
+			</div>
+			<div class=" feedback_4 feedback_container">
+				<div class="feedback valign-bottom">The Recently Published section lists SOPs, non-urgent Bullet*News, and ISCS content.</div>
+			</div>
+			<div class="feedback_5 feedback_container">
+				<div class="feedback valign-bottom">The AppleLearn section lists new, pending, and overdue training.</div>
+			</div>
+			<div class="feedback_6 feedback_container">
+				<div class="feedback valign-bottom">The Emerging Issues section lists articles related to issues Engineering is tracking.</div>
+			</div>
+			<div class="feedback_7 feedback_container">
+				<div class="feedback valign-bottom">The My Handled Cases section lists cases you handled within the last 24 hours.</div>
+			</div>
+		</div>
+		<div class="layer_navigation" style="position: absolute; left: 0px; top: 707.6px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;">
+			<div class="prev_btn nav_btn" style="position: absolute; left: 0px; top: 0px; width: 24px; height: 48px; opacity: 1; pointer-events: auto; display: none;">
+				<svg version="1.1" viewBox="0 0 55 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+          <path fill="none" stroke="#0088CC" stroke-width="14" d="M49,95L10,50L49,5"></path>
+        </svg>
+			</div>
+			<div class="next_btn nav_btn" style="position: absolute; left: 0px; top: 0px; width: 24px; height: 48px; opacity: 1; pointer-events: auto; display: none;">
+				<svg version="1.1" viewBox="0 0 55 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+          <path d="M6 5 L45 50 L6 95" stroke="#0088CC" stroke-width="14" fill="none"></path>
+        </svg>
+			</div>
+			<div class="restart_btn nav_btn blue_button_active" style="position: absolute; left: 0px; top: 0px; width: 180px; opacity: 1; pointer-events: auto; display: none;">
+				Start over
+			</div>
+			<div class="final_feedback feedback_positive" style="position: absolute; left: 180px; top: 15px; width: 560px; opacity: 0; pointer-events: auto;">
+				Congratulations! You've completed this interaction.
+			</div>
+		</div>
+		<!-- END PAGE CONTENT -->
+	</main>
+	<script type="text/javascript" src="jsxml_knowledge_check_dashboard/style.js">
+	</script>
 </body>
 </html>
-

@@ -134,56 +134,56 @@
     }
 
     function u(t) {
-        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()), 
-        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"), 
-        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"), 
-        null == t.attr("w") && t.attr("w", ""), 
-        null == t.attr("h") && t.attr("h", ""), 
-        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"), 
-        null == t.attr("css_style") && t.attr("css_style", ""), 
-        (null == t.attr("permeable") || "" == t.attr("permeable")) && t.attr("permeable", "false"), 
-        f(t), 
-        t.attr("name", t.attr("name").replace(" ", "_")), 
+        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()),
+        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"),
+        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"),
+        null == t.attr("w") && t.attr("w", ""),
+        null == t.attr("h") && t.attr("h", ""),
+        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"),
+        null == t.attr("css_style") && t.attr("css_style", ""),
+        (null == t.attr("permeable") || "" == t.attr("permeable")) && t.attr("permeable", "false"),
+        f(t),
+        t.attr("name", t.attr("name").replace(" ", "_")),
         t.attr("name", t.attr("name").toLowerCase())
     }
 
     function c(t) {
-        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()), 
-        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"), 
-        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"), 
-        null == t.attr("w") && t.attr("w", ""), 
-        null == t.attr("h") && t.attr("h", ""), 
-        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"), 
-        null == t.attr("css_style") && t.attr("css_style", ""), 
-        null == t.attr("file") && t.attr("file", ""), 
-        (null == t.attr("permeable") || "" == t.attr("permeable")) && t.attr("permeable", "false"), 
-        f(t), 
-        t.attr("name", t.attr("name").replace(" ", "_")), 
+        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()),
+        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"),
+        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"),
+        null == t.attr("w") && t.attr("w", ""),
+        null == t.attr("h") && t.attr("h", ""),
+        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"),
+        null == t.attr("css_style") && t.attr("css_style", ""),
+        null == t.attr("file") && t.attr("file", ""),
+        (null == t.attr("permeable") || "" == t.attr("permeable")) && t.attr("permeable", "false"),
+        f(t),
+        t.attr("name", t.attr("name").replace(" ", "_")),
         t.attr("name", t.attr("name").toLowerCase())
     }
 
     function d(t) {
-        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()), 
-        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"), 
-        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"), 
-        null == t.attr("w") && t.attr("w", ""), 
-        null == t.attr("h") && t.attr("h", ""), 
-        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"), 
-        null == t.attr("css_style") && t.attr("css_style", ""), 
+        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()),
+        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"),
+        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"),
+        null == t.attr("w") && t.attr("w", ""),
+        null == t.attr("h") && t.attr("h", ""),
+        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"),
+        null == t.attr("css_style") && t.attr("css_style", ""),
         (null == t.attr("permeable") || "" == t.attr("permeable")) && t.attr("permeable", "false"), null == t.attr("file") && t.attr("file", ""), (null == t.attr("controls") || "" == t.attr("controls")) && t.attr("controls", "true"), (null == t.attr("autoplay") || "" == t.attr("autoplay")) && t.attr("autoplay", "false"), (null == t.attr("loop") || "" == t.attr("loop")) && t.attr("loop", "false"), null == t.attr("image") && t.attr("image", ""), f(t), t.attr("name", t.attr("name").replace(" ", "_")), t.attr("name", t.attr("name").toLowerCase())
     }
 
     function p(t) {
-        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()), 
-        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"), 
-        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"), 
-        null == t.attr("w") && t.attr("w", ""), null == t.attr("h") && t.attr("h", ""), 
-        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"), 
-        null == t.attr("css_style") && t.attr("css_style", ""), 
-        (null == t.attr("permeable") || "" == t.attr("permeable")) && t.attr("permeable", "false"), 
-        null == t.attr("file") && t.attr("file", ""), 
-        (null == t.attr("controls") || "" == t.attr("controls")) && t.attr("controls", "true"), 
-        (null == t.attr("autoplay") || "" == t.attr("autoplay")) && t.attr("autoplay", "false"), 
+        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()),
+        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"),
+        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"),
+        null == t.attr("w") && t.attr("w", ""), null == t.attr("h") && t.attr("h", ""),
+        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"),
+        null == t.attr("css_style") && t.attr("css_style", ""),
+        (null == t.attr("permeable") || "" == t.attr("permeable")) && t.attr("permeable", "false"),
+        null == t.attr("file") && t.attr("file", ""),
+        (null == t.attr("controls") || "" == t.attr("controls")) && t.attr("controls", "true"),
+        (null == t.attr("autoplay") || "" == t.attr("autoplay")) && t.attr("autoplay", "false"),
         (null == t.attr("loop") || "" == t.attr("loop")) && t.attr("loop", "false"), f(t), t.attr("name", t.attr("name").replace(" ", "_")), t.attr("name", t.attr("name").toLowerCase())
     }
 
@@ -192,32 +192,32 @@
     }
 
     function m(t) {
-        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()), 
-        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"), 
-        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"), 
-        null == t.attr("w") && t.attr("w", ""), 
-        null == t.attr("h") && t.attr("h", ""), 
-        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"), 
-        null == t.attr("css_style") && t.attr("css_style", ""), 
-        (null == t.attr("drag_scope") || "" == t.attr("drag_scope")) && t.attr("drag_scope", "default"), 
-        null == t.attr("activated_css_style") && t.attr("activated_css_style", ""), 
-        null == t.attr("drag_over_css_style") && t.attr("drag_over_css_style", ""), 
-        (null == t.attr("permeable") || "" == t.attr("permeable")) && t.attr("permeable", "false"), 
+        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()),
+        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"),
+        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"),
+        null == t.attr("w") && t.attr("w", ""),
+        null == t.attr("h") && t.attr("h", ""),
+        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"),
+        null == t.attr("css_style") && t.attr("css_style", ""),
+        (null == t.attr("drag_scope") || "" == t.attr("drag_scope")) && t.attr("drag_scope", "default"),
+        null == t.attr("activated_css_style") && t.attr("activated_css_style", ""),
+        null == t.attr("drag_over_css_style") && t.attr("drag_over_css_style", ""),
+        (null == t.attr("permeable") || "" == t.attr("permeable")) && t.attr("permeable", "false"),
         t.children("pattern_match").each(function() {
-            null == $(this).attr("match") && $(this).attr("match", ""), 
-            null == $(this).attr("type") && $(this).attr("type", "all"), 
+            null == $(this).attr("match") && $(this).attr("match", ""),
+            null == $(this).attr("type") && $(this).attr("type", "all"),
             null == $(this).attr("action") && $(this).attr("action", "")
-        }), 
+        }),
         t.children("drop_match").each(function() {
-            null == $(this).attr("match") && $(this).remove(), 
+            null == $(this).attr("match") && $(this).remove(),
             null == $(this).attr("action") && $(this).attr("action", "")
-        }), 
-        t.attr("name", t.attr("name").replace(" ", "_")), 
+        }),
+        t.attr("name", t.attr("name").replace(" ", "_")),
         t.attr("name", t.attr("name").toLowerCase())
     }
 
     function h(t) {
-        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()), 
+        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()),
         (null == t.attr("value") || "" == t.attr("value")) && t.attr("value", t.text())
     }
 
@@ -243,16 +243,16 @@
     }
 
     function x(t) {
-        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()), 
-        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"), 
-        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"), 
-        null == t.attr("w") && t.attr("w", ""), 
-        null == t.attr("h") && t.attr("h", ""), 
-        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"), 
-        null == t.attr("css_style") && t.attr("css_style", ""), 
-        (null == t.attr("start_at") || "" == t.attr("start_at")) && t.attr("start_at", "1"), 
-        (null == t.attr("sensitivity") || "" == t.attr("sensitivity")) && t.attr("sensitivity", "10"), 
-        (null == t.attr("auto") || "" == t.attr("auto")) && t.attr("auto", "false"), 
+        (null == t.attr("name") || "" == t.attr("name")) && t.attr("name", mt()),
+        (null == t.attr("x") || "" == t.attr("x")) && t.attr("x", "0"),
+        (null == t.attr("y") || "" == t.attr("y")) && t.attr("y", "0"),
+        null == t.attr("w") && t.attr("w", ""),
+        null == t.attr("h") && t.attr("h", ""),
+        (null == t.attr("a") || "" == t.attr("a")) && t.attr("a", "100"),
+        null == t.attr("css_style") && t.attr("css_style", ""),
+        (null == t.attr("start_at") || "" == t.attr("start_at")) && t.attr("start_at", "1"),
+        (null == t.attr("sensitivity") || "" == t.attr("sensitivity")) && t.attr("sensitivity", "10"),
+        (null == t.attr("auto") || "" == t.attr("auto")) && t.attr("auto", "false"),
         (null == t.attr("loop") || "" == t.attr("loop")) && t.attr("loop", "false"), t.attr("name", t.attr("name").replace(" ", "_")), t.attr("name", t.attr("name").toLowerCase())
     }
 
@@ -352,21 +352,21 @@
 
 
 
-        a.data("element_type", t.attr("layer")), 
-        a.data("name", t.attr("name")), 
-        a.data("x", t.attr("x")), 
-        a.data("y", t.attr("y")), 
-        a.data("w", t.attr("w")), 
-        a.data("h", t.attr("h")), 
-        a.data("a", t.attr("a")), 
-//        a.prop("tabindex", t.attr("tabindex")), 
+        a.data("element_type", t.attr("layer")),
+        a.data("name", t.attr("name")),
+        a.data("x", t.attr("x")),
+        a.data("y", t.attr("y")),
+        a.data("w", t.attr("w")),
+        a.data("h", t.attr("h")),
+        a.data("a", t.attr("a")),
+//        a.prop("tabindex", t.attr("tabindex")),
 
 
-        a.data("css_style", t.attr("css_style")), 
-        a.data("background_color", t.attr("background_color")), 
-        a.data("permeable", t.attr("permeable")), 
-        a.data("scrollable", t.attr("scrollable")), 
-        a.data("scroll_w", t.attr("scroll_w")), 
+        a.data("css_style", t.attr("css_style")),
+        a.data("background_color", t.attr("background_color")),
+        a.data("permeable", t.attr("permeable")),
+        a.data("scrollable", t.attr("scrollable")),
+        a.data("scroll_w", t.attr("scroll_w")),
         a.data("scroll_h", t.attr("scroll_h")), "" != t.attr("onClick") ? a.click(function(a) {
             a.stopPropagation(), H(it(t.attr("onClick")))
         }) : null, "" != t.attr("onDoubleClick") ? a.dblclick(function(a) {
@@ -457,21 +457,21 @@
 
 //        alert(e.find("notrans").text())
 
-//        alert(a.attr("tabindex"));    
+//        alert(a.attr("tabindex"));
 
-        e.data("element_type", "html"), 
-        e.data("name", a.attr("name")), 
-        e.data("x", a.attr("x")), 
-        e.data("y", a.attr("y")), 
-        e.data("w", a.attr("w")), 
-        e.data("h", a.attr("h")), 
-        e.data("a", a.attr("a")), 
-        e.data("css_style", a.attr("css_style")), 
-        e.data("permeable", a.attr("permeable")), 
+        e.data("element_type", "html"),
+        e.data("name", a.attr("name")),
+        e.data("x", a.attr("x")),
+        e.data("y", a.attr("y")),
+        e.data("w", a.attr("w")),
+        e.data("h", a.attr("h")),
+        e.data("a", a.attr("a")),
+        e.data("css_style", a.attr("css_style")),
+        e.data("permeable", a.attr("permeable")),
         e.data("html_text", a.text()),
 
         console.log(e.find("label").text());
-        
+
 //        e.find("> span").prop("tabindex", a.attr("tabindex"))
 //        e.data("tabindex", a.attr("tabindex")),
         t.append(e),
@@ -1577,7 +1577,14 @@
 
     function kt(t) {
         var a = [];
-        a[0] = "Unknown error code", a[1] = "Failed to load data.xml", a[2] = "Incompatible xml version", a[3] = "Failed to load xml file", a[4] = "Action parameters syntax error", a[5] = "Action not recognized", a[6] = "Action element not found", a[7] = "Array not initialized at index", (null == t || !pt(t) || t > a.length) && (t = 0), Pt || Ot || alert("This interaction has encountered an error. Please try refreshing this page and starting the interaction again. \n\nIf this occurs again please report this issue. (" + t + ")"), (Pt || Ot) && alert("This interaction has encountered an error: " + a[t])
+        a[0] = "Unknown error code",
+        a[1] = "Failed to load data.xml",
+        a[2] = "Incompatible xml version",
+        a[3] = "Failed to load xml file",
+        a[4] = "Action parameters syntax error",
+        a[5] = "Action not recognized",
+        a[6] = "Action element not found",
+        a[7] = "Array not initialized at index", (null == t || !pt(t) || t > a.length) && (t = 0), Pt || Ot || alert("This interaction has encountered an error. Please try refreshing this page and starting the interaction again. \n\nIf this occurs again please report this issue. (" + t + ")"), (Pt || Ot) && alert("This interaction has encountered an error: " + a[t])
     }
 
     function Mt() {
