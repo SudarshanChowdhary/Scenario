@@ -6,9 +6,8 @@
 .layer_question {
     box-sizing: border-box;
     position: relative !important;
-    height: auto !important;
+    min-height: 90px;
 
-    margin: 0 auto;
 }
 
 .layer_question .question_txt {
@@ -20,7 +19,13 @@
 }
 
 .layer_image {
-    position: relative !important;
+    position: relative;
+    left: 0px;
+    top: 77px;
+    width: 1000px;
+    height: 562px; opacity: 1;
+    pointer-events: none;;
+    overflow: hidden;
 }
 .layer_image::after {
     position: absolute;
@@ -294,7 +299,7 @@
 
 .layer_feedback {
   position: absolute;
-    top: 850px;
+    top: 650px;
     pointer-events: none !important;
 }
 
@@ -365,23 +370,22 @@
 
 
 .layer_navigation {
-    box-sizing: border-box;
-    /* pointer-events: none !important; */
+  display: block;
+  height: 48px;
+  padding-top: 110px;
 }
 
 .layer_navigation .nav_btn {
     vertical-align: middle;
+
 }
 
 .layer_navigation .prev_btn {
-    left: 10px !important;
-    top: 10px !important;
+  display:inline-block; float:left; width: 24px; height: 48px; opacity: 1; cursor: pointer;
 }
 
 .layer_navigation .next_btn {
-    left: auto !important;
-    top: 10px !important;
-    right: 10px !important;
+  display:inline-block; float:right; width: 24px; height: 48px; opacity: 1; cursor: pointer;
 }
 
 .layer_navigation .restart_btn {
