@@ -299,7 +299,7 @@
 
 .layer_feedback {
   position: absolute;
-    top: 650px;
+    top: 785px;
     pointer-events: none !important;
 }
 
@@ -397,3 +397,16 @@
 .layer_navigation .final_feedback {
     box-sizing: border-box;
 }
+
+.aa{
+    opacity: 0;
+}
+.a11y{
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute
+    }

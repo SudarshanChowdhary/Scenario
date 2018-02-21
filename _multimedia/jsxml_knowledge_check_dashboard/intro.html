@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<script src="engine/jquery/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript">
-		$("document").ready(function() {
+		$("document").ready(function () {
 			var slides = [{
 					"question": "<h3>Scenario 1 of 7</h3><p>You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’ battery life. Where can you add this link so you can quickly open it later in Safari?</p>",
 					"answer": 0
@@ -34,7 +35,8 @@
 					"answer": 4
 				}
 			];
-			var feedbacks = ["Correct! You use the My Links section to save your frequently used links. Remember, you can add and remove links and organize links using folders.",
+			var feedbacks = [
+				"You use the My Links section to save your frequently used links. Remember, you can add and remove links and organize links using folders.",
 				"The Needs Attention section lists Bullet*News articles.",
 				"The My Commitments section lists your callbacks and follow-ups.",
 				"The Recently Published section lists SOPs, non-urgent Bullet*News, and ISCS content.",
@@ -43,17 +45,21 @@
 				"The My Handled Cases section lists cases you handled within the last 24 hours."
 			];
 
+
 			var currentSlide = 0;
+			$(".nav_btn.prev_btn").hide();
+			$(".nav_btn.next_btn").hide();
+
 			if (currentSlide == 0) {
 				$(".nav_btn.prev_btn").prop('disabled', true);
 				$(".nav_btn.prev_btn").hide();
 			}
 			loadSlide(currentSlide);
 
-			$(".nav_btn.next_btn").on('click', function() {
+			$(".nav_btn.next_btn").on('click', function () {
 				if (currentSlide < slides.length) {
 					$(".nav_btn.next_btn").prop('disabled', false);
-					$(".nav_btn.next_btn").show();
+					$(".nav_btn.next_btn").hide();
 					$(".nav_btn.prev_btn").prop('disabled', false);
 					$(".nav_btn.prev_btn").show();
 					currentSlide++;
@@ -63,10 +69,11 @@
 				if (currentSlide >= slides.length) {
 					$(".nav_btn.next_btn").prop('disabled', true);
 					$(".nav_btn.next_btn").hide();
+					$(".nav_btn.prev_btn").show();
 				}
 			})
 
-			$(".nav_btn.prev_btn").on('click', function() {
+			$(".nav_btn.prev_btn").on('click', function () {
 				if (currentSlide > 0) {
 					currentSlide--;
 					loadSlide(currentSlide);
@@ -80,9 +87,9 @@
 				}
 			})
 
-			$("label.blue_button_active").on('mouseenter', function() {
+			$("label.blue_button_active").on('mouseenter', function () {
 				var hoveredBtn = $(this).attr("count");
-				$(".item").each(function(i) {
+				$(".item").each(function (i) {
 					$(this).removeClass("on_hover");
 					if (i == hoveredBtn) {
 						$(".item_" + (i + 1)).addClass("on_hover");
@@ -90,7 +97,7 @@
 				})
 			});
 
-			$("label.blue_button_active").on('mouseleave', function() {
+			$("label.blue_button_active").on('mouseleave', function () {
 				var hoveredBtn = $(this).attr("count");
 				$(".item_" + (parseInt(hoveredBtn) + 1)).removeClass("on_hover");
 			});
@@ -99,14 +106,15 @@
 				$(".question_txt").html(slides[currentSlide].question);
 				$(".feedback_container").addClass('hide');
 				$(".feedback_container").removeClass('show');
+				setTimeout(function(){ $('h3').focus(); }, 400);
 
 
-				$(".aa").on("change", function() {
+				$(".aa").on("change", function () {
 					$(".feedback_container").removeClass('correct');
 					$(".feedback_container").removeClass('incorrect');
 					$(".feedback_container").removeClass('show');
 					$(".blue_button_active").removeClass("correct");
-				
+
 					$(".blue_button_active").removeClass("incorrect");
 					if ($(this).is(":checked")) {
 						var i = parseInt($(this).val());
@@ -114,36 +122,107 @@
 							$(".button_" + (i + 1)).addClass("correct");
 							$(".feedback_container").addClass('correct show');
 							$(".feedback_container .feedback").html(feedbacks[i]);
+							$(".nav_btn.next_btn").show();
 						} else {
 							$(".button_" + (i + 1)).addClass("incorrect");
 							$(".feedback_container").addClass('incorrect show');
 							$(".feedback_container .feedback").html(feedbacks[i]);
+							$(".nav_btn.next_btn").hide();
+							$(".nav_btn.prev_btn").show();
 						}
 					}
 				});
-			
-			
-				$(".aa").on("click", function() {
+
+
+				$(".aa").on("click", function () {
 					$(".feedback_container").removeClass('correct');
 					$(".feedback_container").removeClass('incorrect');
 					$(".feedback_container").removeClass('show');
 					$(".blue_button_active").removeClass("correct");
 					$(".blue_button_active").removeClass("incorrect");
-					
-					
+
+
 					if ($(this).is(":checked")) {
 						var i = parseInt($(this).val());
 						if (i == slides[currentSlide].answer) { //change the scenario id
 							$(".button_" + (i + 1)).addClass("correct");
 							$(".feedback_container").addClass('correct show');
 							$(".feedback_container .feedback").html(feedbacks[i]);
+							$(".nav_btn.next_btn").show();
 						} else {
 							$(".button_" + (i + 1)).addClass("incorrect");
 							$(".feedback_container").addClass('incorrect show');
 							$(".feedback_container .feedback").html(feedbacks[i]);
+							$(".nav_btn.next_btn").hide();
+							$(".nav_btn.prev_btn").show();
 						}
 					}
 				});
+
+				$("#customRadioGroup li").on("click", function(event) {
+					
+					$(".feedback_container").removeClass('correct');
+					$(".feedback_container").removeClass('incorrect');
+					$(".feedback_container").removeClass('show');
+					$(".blue_button_active").removeClass("correct");
+					$(".blue_button_active").removeClass("incorrect");
+				$("#customRadioGroup li").attr("tabindex","-1");
+				$("#customRadioGroup li").attr("aria-checked","false");
+				$(this).attr("tabindex","0");
+				$(this).attr("aria-checked","true");
+				$(this).focus();
+				if ($(this).attr('aria-checked')=="true") {
+					
+						var i = parseInt($(this).attr('count'));
+						//alert(i);
+						if(slides[currentSlide].answer=='0'){
+							$(".nav_btn.prev_btn").hide();
+						}
+						if (i == slides[currentSlide].answer) { //change the scenario id
+							$(".button_" + (i + 1)).addClass("correct");
+							$(".feedback_container").addClass('correct show');
+							$(".feedback_container .feedback").html(feedbacks[i]);
+							$(".nav_btn.next_btn").show();
+							setTimeout(function(){ $('#answer-sel').empty().text('Selection is Correct'); }, 500);
+						} else {
+							$(".button_" + (i + 1)).addClass("incorrect");
+							$(".feedback_container").addClass('incorrect show');
+							$(".feedback_container .feedback").html(feedbacks[i]);
+							$(".nav_btn.next_btn").hide();
+							slides[currentSlide].answer=='0' ? $(".nav_btn.prev_btn").hide() : $(".nav_btn.prev_btn").show();
+							setTimeout(function(){ $('#answer-sel').empty().text('Selection is Wrong'); }, 500);
+							setTimeout(function(){ $('#answer-sel').empty(); }, 700);
+							
+						}
+					}
+			});
+
+			$("#customRadioGroup li").on("keydown", function(event) {
+				switch(event.keyCode){
+					case 39:
+					case 40:
+						if( $(this).next().length==0 ){
+							$(this).parent().find(":first").click();
+						}else{
+							$(this).next().click();	
+						}
+						event.preventDefault();
+						break;
+					case 37:
+					case 38:
+						if( $(this).prev().length==0 ){
+							$(this).parent().find(":last").click();
+						}else{
+							$(this).prev().click();	
+						}
+						event.preventDefault();
+						break;
+					case 32:
+						$(this).click();
+						event.preventDefault();
+						break;
+				}
+			});
 			}
 		});
 	</script>
@@ -177,45 +256,71 @@
 				<div class="item_7 item item_button" style="position: absolute; left: 778px; top: 360px; width: 222px; height: 202px; opacity: 1;">
 				</div>
 				<form id="radioForm" data-scenario="1">
-					<label for="My-Links" class="button_1 blue_button_active pointer-top-left" count="0" data-answer="true" style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1;">
-            My Links
-					  <span class="icon"></span>
-          </label>
-					<input type="radio" class="aa" value="0" name="answers" id="My-Links">
 
+						<p id="customRadioGroupTitle" class="a11y">choose the correct section of Dashboard</p>
+						<ul role="radiogroup" id="customRadioGroup" aria-labelledby="customRadioGroupTitle">
+							<li tabindex="0" role="none" aria-checked="false" role="radio" class="button_1 blue_button_active pointer-top-left" count="0" data-answer="true" style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1;">
+								<span class="radio-icon"></span> My Links
+							</li>
+							<li tabindex="-1" aria-checked="false" role="radio" class="button_2 blue_button_active pointer-bottom-left" count="1" style="position: absolute; left: 228px; top: -15px; width: 180px; opacity: 1;">
+								<span class="radio-icon"></span> Needs Attention
+							</li>
+							<li tabindex="-1" aria-checked="false" role="radio" class="button_3 blue_button_active pointer-right" count="2" style="position: absolute; left: 35px; top: 270px; width: 180px; opacity: 1;">
+								<span class="radio-icon"></span> My Commitments
+							</li>
+							<li tabindex="-1" aria-checked="false" role="radio" class="button_4 blue_button_active pointer-right" count="3" style="position: absolute; left: 35px; top: 365px; width: 180px; opacity: 1;">
+								<span class="radio-icon"></span> Recently Published
+							</li>
+							<li tabindex="-1" aria-checked="false" role="radio" class="button_4 blue_button_active pointer-right" count="4" style="position: absolute; left: 35px; top: 468px; width: 180px; opacity: 1;">
+								<span class="radio-icon"></span> AppleLearn
+							</li>
+							<li tabindex="-1" aria-checked="false" role="radio" class="button_4 blue_button_active pointer-right" count="5" style="position: absolute; left: 788px; top: 180px; width: 200px; opacity: 1;">
+								<span class="radio-icon"></span> Emerging Issues
+							</li>
+							<li tabindex="-1" aria-checked="false" role="radio" class="button_4 blue_button_active pointer-right" count="6" style="position: absolute; left: 788px; top: 316px; width: 200px; opacity: 1;">
+								<span class="radio-icon"></span> MyHandled Case
+							</li>
+						</ul>
+					
+					<!-- <input type="radio"  class="aa" value="0" name="answers" id="My-Links">
+<label for="My-Links" class="button_1 blue_button_active pointer-top-left" count="0" data-answer="true" style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1;">
+            My Links
+					  <span class="icon" aria-hidden="true"></span>
+          </label> -->
+					
+
+					<!-- <input type="radio" class="aa" value="1" name="answers" id="Needs-Attention" >
 					<label for="Needs-Attention" class="button_2 blue_button_active pointer-bottom-left" count="1" style="position: absolute; left: 228px; top: -15px; width: 180px; opacity: 1;">
             Needs Attention
           	<span class="icon"></span>
-          </label>
-
-					<input type="radio" class="aa" value="1" name="answers" id="Needs-Attention">
-					<label for="My-Commitments" class="button_3 blue_button_active pointer-right" count="2" style="position: absolute; left: 35px; top: 270px; width: 180px; opacity: 1;">
+		  </label> -->
+		  
+					<!-- <input type="radio" class="aa" value="2" name="answers" id="My-Commitments">
+<label for="My-Commitments" class="button_3 blue_button_active pointer-right" count="2" style="position: absolute; left: 35px; top: 270px; width: 180px; opacity: 1;">
               My Commitments
               <span class="icon"></span>
-          </label>
-					<input type="radio" class="aa" value="2" name="answers" id="My-Commitments">
-
-					<label for="Recently-Published" class="button_4 blue_button_active pointer-right" count="3" style="position: absolute; left: 35px; top: 365px; width: 180px; opacity: 1;">
+          </label> -->
+					
+					<!-- <input type="radio" class="aa" value="3" name="answers" id="Recently-Published">
+<label for="Recently-Published" class="button_4 blue_button_active pointer-right" count="3" style="position: absolute; left: 35px; top: 365px; width: 180px; opacity: 1;">
             Recently Published
-            <span class="icon"></span></label>
-					<input type="radio" class="aa" value="3" name="answers" id="Recently-Published">
-
-					<label for="AppleLearn" class="button_5 blue_button_active pointer-right" count="4" style="position: absolute; left: 35px; top: 468px; width: 180px; opacity: 1;">
+            <span class="icon"></span></label> -->
+					
+					<!-- <input type="radio" class="aa" value="4" name="answers" id="AppleLearn">
+<label for="AppleLearn" class="button_5 blue_button_active pointer-right" count="4" style="position: absolute; left: 35px; top: 468px; width: 180px; opacity: 1;">
             AppleLearn
             <span class="icon"></span>
-          </label>
-					<input type="radio" class="aa" value="4" name="answers" id="AppleLearn">
-
-					<label for="Emerging-Issues" class="button_6 blue_button_active pointer-top-left" count="5" style="position: absolute; left: 788px; top: 180px; width: 200px; opacity: 1;">
+          </label> -->
+					
+					<!-- <input type="radio" class="aa" value="5" name="answers" id="Emerging-Issues">
+<label for="Emerging-Issues" class="button_6 blue_button_active pointer-top-left" count="5" style="position: absolute; left: 788px; top: 180px; width: 200px; opacity: 1;">
             Emerging Issues
-            <span class="icon"></span></label>
-					<input type="radio" class="aa" value="5" name="answers" id="Emerging-Issues">
-
-					<label for="My-Handled" class="button_7 blue_button_active pointer-bottom-left" count="6" style="position: absolute; left: 788px; top: 316px; width: 200px; opacity: 1;">
+            <span class="icon"></span></label> -->
+					
+					<!-- <input type="radio" class="aa" value="6" name="answers" id="My-Handled"><label for="My-Handled" class="button_7 blue_button_active pointer-bottom-left" count="6" style="position: absolute; left: 788px; top: 316px; width: 200px; opacity: 1;">
             MyHandled Case
             <span class="icon"></span>
-          </label>
-					<input type="radio" class="aa" value="6" name="answers" id="My-Handled">
+          </label> -->
 				</form>
 			</div>
 			<div class="layer_feedback">
@@ -226,12 +331,12 @@
 				</div>
 			</div>
 			<div class="layer_navigation">
-				<div class="prev_btn nav_btn" aria-label="Previous Slide">
+				<div class="prev_btn nav_btn" aria-label="Previous Slide" role="button" tabindex="0">
 					<svg version="1.1" viewBox="0 0 55 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 						<path fill="none" stroke="#0088CC" stroke-width="14" d="M49, 95L10,50L49,5"></path>
 					</svg>
 				</div>
-				<div class="next_btn nav_btn" aria-label="Next Slide">
+				<div class="next_btn nav_btn" aria-label="Next Slide" role="button" tabindex="0">
 					<svg version="1.1" viewBox="0 0 55 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/x ml-events">
 						<path d="M6 5 L45 50 L6 95" stroke="#0088CC" stroke-width="14" fill="none"></path>
 					</svg>
@@ -241,11 +346,11 @@
 					<label>Start over</label>
 				</div> -->
 				<div class="final_feedback feedback_positive" style="position: absolute; left: 180px; top: 15px; width: 560px; opacity: 0; pointer-events: auto;">
-					<label>Congratulations! You've completed this interaction.</label>
+					<label aria-hidden="true">Congratulations! You've completed this interaction.</label>
 				</div>
 			</div>
 		</div>
-
+<p class="a11y" aria-live="polite" id="answer-sel"></p>
 	</main>
 </body>
 
