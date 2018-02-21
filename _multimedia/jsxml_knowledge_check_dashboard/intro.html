@@ -97,12 +97,40 @@
 
 			function loadSlide(currentSlide) {
 				$(".question_txt").html(slides[currentSlide].question);
+				$(".feedback_container").addClass('hide');
+				$(".feedback_container").removeClass('show');
+
+
 				$(".aa").on("change", function() {
 					$(".feedback_container").removeClass('correct');
 					$(".feedback_container").removeClass('incorrect');
 					$(".feedback_container").removeClass('show');
-					//					$(".blue_button_active").removeClass("correct");
+					$(".blue_button_active").removeClass("correct");
+				
 					$(".blue_button_active").removeClass("incorrect");
+					if ($(this).is(":checked")) {
+						var i = parseInt($(this).val());
+						if (i == slides[currentSlide].answer) { //change the scenario id
+							$(".button_" + (i + 1)).addClass("correct");
+							$(".feedback_container").addClass('correct show');
+							$(".feedback_container .feedback").html(feedbacks[i]);
+						} else {
+							$(".button_" + (i + 1)).addClass("incorrect");
+							$(".feedback_container").addClass('incorrect show');
+							$(".feedback_container .feedback").html(feedbacks[i]);
+						}
+					}
+				});
+			
+			
+				$(".aa").on("click", function() {
+					$(".feedback_container").removeClass('correct');
+					$(".feedback_container").removeClass('incorrect');
+					$(".feedback_container").removeClass('show');
+					$(".blue_button_active").removeClass("correct");
+					$(".blue_button_active").removeClass("incorrect");
+					
+					
 					if ($(this).is(":checked")) {
 						var i = parseInt($(this).val());
 						if (i == slides[currentSlide].answer) { //change the scenario id
