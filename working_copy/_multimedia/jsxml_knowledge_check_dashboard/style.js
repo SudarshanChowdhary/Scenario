@@ -1,3 +1,4 @@
+alert("heloo");
 $("document").ready(function () {
   var slides = [{
       "question": "<h3>Scenario 1 of 7</h3><p>You frequently refer customers to apple.com/batteries so they can learn more about managing their devices’ battery life. Where can you add this link so you can quickly open it later in Safari?</p>",

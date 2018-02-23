@@ -6,54 +6,93 @@
 	<script src="engine/jquery/jquery-2.1.3.min.js"></script>
 	<script src="style.js"></script>
 	<link href="interaction.css" rel="stylesheet" type="text/css"/>
+
+	<style type="text/css">
+		.show{display:block;}
+		.hide{display:none;}
+		</style>
+		<script type="text/javascript">
+		function showImg()
+		{
+		var obj=document.getElementById('Picture1');
+		obj.className = 'show';
+		}
+		</script>
+		
 </head>
 
 <body>
+	
+<div>
+		<img id="Picture1" src="images/AppleLearn02.png" class="hide">
+		<input type="button" onclick = "showImg()" value= "Picture1">
+</div>
+		
+
+	
 	<!-- <div id="interaction"></div> -->
 	<main>
-			<div class="layer_image layer" style="position: absolute; left: 0px; top: 90px; width: 1000px; height: 642px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;">
+			<div class="layer_image layer" id="main_bg_image" style="position: absolute; left: 0px; width: 1000px; height: 642px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;">
 					<img class="bg_image" aria-hidden="true" src="images/dashboard_01.png" style="position: absolute; left: 0px; top: 0px; width: 1000px; opacity: 1; pointer-events: none;">
+				</div>
+				<div id="AllImages" style="display:none;">
+					<div id="AppleLearn02"><img src="images/AppleLearn02.png" alt="" style=" width: 1000px; height: 642px;" ></div>
+					<div id="AppleLearn"><img src="images/AppleLearn.png" alt="" style=" width: 1000px; height: 642px;"></div>
+					<div id="Emerging_Issues"><img src="images/Emerging_Issues.png" alt="" style=" width: 1000px; height: 642px;"></div>
+					<div id="My_Commitments"><img src="images/My_Commitments.png" alt="" style=" width: 1000px; height: 642px;"></div>
+					<div id="My_Handled_Cases"><img src="images/My_Handled_Cases.png" alt="" style=" width: 1000px; height: 642px;"></div>
+					<div id="My_Links02"><img src="images/My_Links02.png" alt="" style=" width: 1000px; height: 642px;"></div>
+					<div id="My_Links01"><img src="images/My_Links.png" alt="" style=" width: 1000px; height: 642px;"></div>
+					<div id="Need_Attention"><img src="images/Need_Attention.png" alt="" style=" width: 1000px; height: 642px;"></div>
+					<div id="Recently_Published"><img src="images/Recently_Published.png" alt="" style=" width: 1000px; height: 642px;"></div>
+	
+				</div>
+
+				<div id="button_layer" class="layer_item" style="position: absolute; left: 6px; top: 6px; width: 1000px; opacity: 1; overflow: hidden;">
+					<div class="item_1 item item_button" style="position: absolute; left: 0px; top: 19px; width: 147px; height: 543px; opacity: 1;">
+					</div>
+					<div class="item_2 item item_button" style="position: absolute; left: 228px; top: 19px; width: 464px; height: 252px; opacity: 1;">
+					</div>
+					<div class="item_3 item item_button" style="position: absolute; left: 228px; top: 272px; width: 464px; height: 92px; opacity: 1;">
+					</div>
+					<div class="item_4 item item_button" style="position: absolute; left: 228px; top: 365px; width: 464px; height: 98px; opacity: 1;">
+					</div>
+					<div class="item_5 item item_button" style="position: absolute; left: 228px; top: 468px; width: 464px; height: 94px; opacity: 1;">
+					</div>
+					<div class="item_6 item item_button" style="position: absolute; left: 778px; top: 19px; width: 222px; height: 340px; opacity: 1;">
+					</div>
+					<div class="item_7 item item_button" style="position: absolute; left: 778px; top: 360px; width: 222px; height: 202px; opacity: 1;">
+					</div>
 				</div>
 
 			<div id="someid">
-					<button class="button_1 blue_button_active pointer-top-left completed-true" style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1;">My Links</button>
+					<button class="button_1 blue_button_active pointer-top-left completed-true" onclick="My_Links()" style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1;">My Links</button>
 					<span class="icon"></span>
 					
-					<button class="button_2 blue_button_active pointer-bottom-left" style="position: absolute; left: 228px; top: -15px; width: 180px; opacity: 1;">Needs Attention</button>
+					<button class="button_2 blue_button_active pointer-bottom-left" onclick="Needs_Attention()" style="position: absolute; left: 228px; top: 10px; width: 180px; opacity: 1;">Needs Attention</button>
 					<span class="icon"></span>
 					
 					
-					<button for="My-Commitments" class="button_3 blue_button_active pointer-right" style="position: absolute; left: 35px; top: 270px; width: 180px; opacity: 1;">My Commitments</button>
+					<button for="My-Commitments" class="button_3 blue_button_active pointer-right" onclick="My_Commitments()" style="position: absolute; left: 35px; top: 270px; width: 180px; opacity: 1;">My Commitments</button>
 				
 					<span class="icon"></span>
 					
-					<button for="Recently-Published" class="button_4 blue_button_active pointer-right" style="position: absolute; left: 35px; top: 365px; width: 180px; opacity: 1;">Recently Published</button>
+					<button for="Recently-Published" class="button_4 blue_button_active pointer-right" onclick="Recently_Published()" style="position: absolute; left: 35px; top: 365px; width: 180px; opacity: 1;">Recently Published</button>
 				
 					<span class="icon"></span>
 
 
-					<button for="AppleLearn" class="button_5 blue_button_active pointer-right" style="position: absolute; left: 35px; top: 468px; width: 180px; opacity: 1;">AppleLearn</button>
+					<button for="AppleLearn" class="button_5 blue_button_active pointer-right" onclick="AppleLearn()" style="position: absolute; left: 35px; top: 468px; width: 180px; opacity: 1;">AppleLearn</button>
 					
 					<span class="icon"></span>
-					<button for="Emerging-Issues" class="button_6 blue_button_active pointer-top-left" style="position: absolute; left: 788px; top: 180px; width: 200px; opacity: 1;">Emerging Issues</button>
+					<button for="Emerging-Issues" class="button_6 blue_button_active pointer-top-left" onclick="Emerging_Issues()" style="position: absolute; left: 788px; top: 180px; width: 200px; opacity: 1;">Emerging Issues</button>
 					
 					<span class="icon"></span>
-					<button for="My-Handled" class="button_7 blue_button_active pointer-bottom-left" style="position: absolute; left: 788px; top: 316px; width: 200px; opacity: 1;">MyHandled Case</button>
+					<button for="My-Handled" class="button_7 blue_button_active pointer-bottom-left" onclick="MyHandled_Case()" style="position: absolute; left: 788px; top: 316px; width: 200px; opacity: 1;">MyHandled Case</button>
 					
 					<span class="icon"></span>
 			</div>
-			<div id="AllImages">
-				<div><img src="images/AppleLearn02.png" alt="" style=" width: 1000px; height: 642px;" ></div>
-				<div><img src="images/AppleLearn.png" alt="" style=" width: 1000px; height: 642px;"></div>
-				<div><img src="images/Emerging_Issues.png" alt="" style=" width: 1000px; height: 642px;"></div>
-				<div><img src="images/My_Commitments.png" alt="" style=" width: 1000px; height: 642px;"></div>
-				<div><img src="images/My_Handled_Cases.png" alt="" style=" width: 1000px; height: 642px;"></div>
-				<div><img src="images/My_Links02.png" alt="" style=" width: 1000px; height: 642px;"></div>
-				<div><img src="images/My_Links.png" alt="" style=" width: 1000px; height: 642px;"></div>
-				<div><img src="images/Need_Attention.png" alt="" style=" width: 1000px; height: 642px;"></div>
-				<div><img src="images/Recently_Published.png" alt="" style=" width: 1000px; height: 642px;"></div>
-
-			</div>
+			
 	</main>
 
 </body>
