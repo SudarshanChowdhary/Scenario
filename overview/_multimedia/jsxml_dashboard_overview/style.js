@@ -1,5 +1,12 @@
 //alert("he");
 
+function showImg()
+		{
+		var obj=document.getElementById('Picture1');
+		obj.className = 'show';
+		$("#button_layer").hide();
+		}
+
 function My_Links() {
 	alert("kjashlkjhlaksjdhflkasjdfhlkj");
 	$("#main_bg_image").hide();
