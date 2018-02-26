@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $('.feedback_container').hide();
     $(".blue_button_active").on('mouseenter', function () {
         var hoveredBtn = parseInt($(this).attr("count"));
         $(".item_" + (hoveredBtn + 1)).addClass("on_hover");
@@ -9,76 +10,140 @@ $(document).ready(function () {
     });
 
     $("#my-links-btn").click(function () {
-      //  alert("helloo")
         $("#slide1").hide();
+        $(this).addClass("correct");
         $("#my-links-slide").show();
-        $("this").addClass("correct");
     });
-
-    $("#my-links-zoomout").click(function () {
-        $("#slide1").show();
-        $("#my-links-slide").hide();
-    })
-
 
     $("#needs-attention-btn").click(function () {
         $("#slide1").hide();
+        $(this).addClass("correct");
         $("#needs-attention-slide").show();
     });
 
-    $("#needs-attention-zoomout").click(function () {
-        $("#slide1").show();
-        $("#needs-attention-slide").hide();
-    })
-
     $("#my-commitments-btn").click(function () {
         $("#slide1").hide();
+        $(this).addClass("correct");
         $("#my-commitments-slide").show();
     });
 
-    $("#my-commitments-zoomout").click(function () {
-        $("#slide1").show();
-        $("#my-commitments-slide").hide();
-    })
-
     $("#recently-published-btn").click(function () {
         $("#slide1").hide();
+        $(this).addClass("correct");
         $("#recently-published-slide").show();
     });
 
-    $("#recently-published-zoomout").click(function () {
-        $("#slide1").show();
-        $("#recently-published-slide").hide();
-    })
-
     $("#apple-learn-btn").click(function () {
         $("#slide1").hide();
+        $(this).addClass("correct");
         $("#apple-learn-slide").show();
     });
 
-    $("#apple-learn-zoomout").click(function () {
-        $("#slide1").show();
-        $("#apple-learn-slide").hide();
-    })
-
     $("#emerging-issues-btn").click(function () {
         $("#slide1").hide();
+        $(this).addClass("correct");
         $("#emerging-issues-slide").show();
     });
 
-    $("#emerging-issues-zoomout").click(function () {
-        $("#slide1").show();
-        $("#emerging-issues-slide").hide();
-    })
-
     $("#my-handled-cases-btn").click(function () {
         $("#slide1").hide();
+        $(this).addClass("correct");
         $("#my-handled-cases-slide").show();
     });
+  
 
-    $("#my-handled-cases-zoomout").click(function () {
+    $(".Need_attention_common").click(function () {
+        Need_attention_common(this.id);
+    });
+
+    $(".zoom_out_btn").click(function () {
+        reset_all_msg();
         $("#slide1").show();
-        $("#my-handled-cases-slide").hide();
+        $("#" + this.parentElement.parentNode.id).hide();
     })
 
+    function reset_all_msg() {
+        $('.feedback_1, .feedback_2, .feedback_3, .feedback_4').hide();
+    };
+
+    function Need_attention_common(val) {
+        switch (val) {
+            case 'My_Links_msg1':
+                $('.feedback_1').show();
+                $('.feedback_2').hide();
+                break;
+            case 'My_Links_msg2':
+                $('.feedback_2').show();
+                $('.feedback_1').hide();
+
+                break;
+            case 'Need_attention_msg1':
+                $('.feedback_1').show();
+                $('.feedback_2').hide();
+                $('.feedback_3').hide();
+                $('.feedback_4').hide();
+                break;
+            case 'Need_attention_msg2':
+                $('.feedback_2').show();
+                $('.feedback_1').hide();
+                $('.feedback_3').hide();
+                $('.feedback_4').hide();
+                break;
+            case 'Need_attention_msg3':
+                $('.feedback_3').show();
+                $('.feedback_1').hide();
+                $('.feedback_2').hide();
+                $('.feedback_4').hide();
+                break;
+            case 'Need_attention_msg4':
+                $('.feedback_4').show();
+                $('.feedback_1').hide();
+                $('.feedback_2').hide();
+                $('.feedback_3').hide();
+                break;
+            case 'slide3-msg1':
+                $('.feedback_1').show();
+                break;
+            case 'my-commitments-msg1':
+                $('.feedback_1').show();
+                $('.feedback_2').hide();
+                break;
+            case 'my-commitments-msg2':
+                $('.feedback_1').hide();
+                $('.feedback_2').show();
+                break;
+            case 'recently-published-msg1':
+                $('.feedback_2').hide();
+                $('.feedback_1').show();
+                $('.feedback_3').hide();
+                break;
+            case 'recently-published-msg2':
+                $('.feedback_2').show();
+                $('.feedback_1').hide();
+                $('.feedback_3').hide();
+                break;
+            case 'recently-published-msg3':
+                $('.feedback_2').hide();
+                $('.feedback_1').hide();
+                $('.feedback_3').show();
+                break;
+            case 'apple-learn-msg1':
+                $('.feedback_1').show();
+                break;
+            case 'emerging-issues-msg1':
+                $('.feedback_1').show();
+                break;
+            case 'my-handled-cases-msg1':
+                $('.feedback_1').show();
+                $('.feedback_2').hide();
+                break;
+            case 'my-handled-cases-msg2':
+                $('.feedback_1').hide();
+                $('.feedback_2').show();
+                break;
+
+
+        }
+
+    };
 })

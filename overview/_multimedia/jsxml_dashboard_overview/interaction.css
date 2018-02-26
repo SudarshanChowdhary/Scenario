@@ -268,9 +268,8 @@
 }
 
 .feedback_container {
-    opacity: 0 !important;
+    /* opacity: 0 !important; */
     pointer-events: none !important;
-    
     transition: opacity .3s ease-out;
 }
 
@@ -326,4 +325,9 @@
 .show-hint.layer_item .item::before {
     opacity: .4;
 }
+.correct {
+    display: block;
+    background: url(images/correct.svg) no-repeat right;
+}
+
 
