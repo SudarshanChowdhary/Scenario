@@ -1,0 +1,626 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script src="engine/jquery/jquery-2.1.3.min.js"></script>
+	<link href="engine/engine.css" rel="stylesheet" type="text/css" />
+	<link href="engine/standard.css" rel="stylesheet" type="text/css" />
+	<link href="engine/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+	<link href="interaction.css" rel="stylesheet" type="text/css" />
+	<script src="style.js"></script>
+	<script>
+		// $(document).ready(function() {
+		// 	$(".blue_button_active").on('mouseenter', function() {
+		// 		var hoveredBtn = parseInt($(this).attr("count"));
+		// 		$(".item_" + (hoveredBtn + 1)).addClass("on_hover");
+		// 	});
+		// 	$(".blue_button_active").on('mouseleave', function() {
+		// 		var hoveredBtn = parseInt($(this).attr("count"));
+		// 		$(".item_" + (hoveredBtn + 1)).removeClass("on_hover");
+		// 	});
+
+		// 	$("#my-links-btn").click(function() {
+		// 		$("#slide1").hide();
+		// 		$("#my-links-slide").show();
+		// 	});
+
+		// 	$("#my-links-zoomout").click(function() {
+		// 		$("#slide1").show();
+		// 		$("#my-links-slide").hide();
+		// 	})
+
+
+		// 	$("#needs-attention-btn").click(function() {
+		// 		$("#slide1").hide();
+		// 		$("#needs-attention-slide").show();
+		// 	});
+
+		// 	$("#needs-attention-zoomout").click(function() {
+		// 		$("#slide1").show();
+		// 		$("#needs-attention-slide").hide();
+		// 	})
+
+		// 	$("#my-commitments-btn").click(function() {
+		// 		$("#slide1").hide();
+		// 		$("#my-commitments-slide").show();
+		// 	});
+
+		// 	$("#my-commitments-zoomout").click(function() {
+		// 		$("#slide1").show();
+		// 		$("#my-commitments-slide").hide();
+		// 	})
+
+		// 	$("#recently-published-btn").click(function() {
+		// 		$("#slide1").hide();
+		// 		$("#recently-published-slide").show();
+		// 	});
+
+		// 	$("#recently-published-zoomout").click(function() {
+		// 		$("#slide1").show();
+		// 		$("#recently-published-slide").hide();
+		// 	})
+
+		// 	$("#apple-learn-btn").click(function() {
+		// 		$("#slide1").hide();
+		// 		$("#apple-learn-slide").show();
+		// 	});
+
+		// 	$("#apple-learn-zoomout").click(function() {
+		// 		$("#slide1").show();
+		// 		$("#apple-learn-slide").hide();
+		// 	})
+
+		// 	$("#emerging-issues-btn").click(function() {
+		// 		$("#slide1").hide();
+		// 		$("#emerging-issues-slide").show();
+		// 	});
+
+		// 	$("#emerging-issues-zoomout").click(function() {
+		// 		$("#slide1").show();
+		// 		$("#emerging-issues-slide").hide();
+		// 	})
+
+		// 	$("#my-handled-cases-btn").click(function() {
+		// 		$("#slide1").hide();
+		// 		$("#my-handled-cases-slide").show();
+		// 	});
+
+		// 	$("#my-handled-cases-zoomout").click(function() {
+		// 		$("#slide1").show();
+		// 		$("#my-handled-cases-slide").hide();
+		// 	})
+
+		// })
+	</script>
+</head>
+
+<body>
+
+	<div style="height: 642px; width: 1000px; background-color: transparent;" class="slides" count="0" id="slide1">
+		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_variables">
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_image layer">
+			<img style="position: absolute; left: 0px; top: 0px; width: 1000px; opacity: 1; pointer-events: auto;" src="images/dashboard_01.png" class="bg_image">
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_item">
+			<div style="position: absolute; left: 0px; top: 19px; width: 147px; height: 543px; opacity: 1; pointer-events: auto;" class="item_1 item item_button">
+			</div>
+			<div style="position: absolute; left: 228px; top: 19px; width: 464px; height: 252px; opacity: 1; pointer-events: auto;" class="item_2 item item_button">
+			</div>
+			<div style="position: absolute; left: 228px; top: 272px; width: 464px; height: 92px; opacity: 1; pointer-events: auto;" class="item_3 item item_button">
+			</div>
+			<div style="position: absolute; left: 228px; top: 365px; width: 464px; height: 98px; opacity: 1; pointer-events: auto;" class="item_4 item item_button">
+			</div>
+			<div style="position: absolute; left: 228px; top: 467px; width: 464px; height: 95px; opacity: 1; pointer-events: auto;" class="item_5 item item_button">
+			</div>
+			<div style="position: absolute; left: 778px; top: 19px; width: 222px; height: 340px; opacity: 1; pointer-events: auto;" class="item_6 item item_button">
+			</div>
+			<div style="position: absolute; left: 778px; top: 360px; width: 222px; height: 202px; opacity: 1; pointer-events: auto;" class="item_7 item item_button">
+			</div>
+			
+			<button count="0" style="position: absolute; left: 5px; top: 120px; width: 180px; opacity: 1; pointer-events: auto;" class="button_1 blue_button_active pointer-top-left completed-false" id="my-links-btn">
+				My Links<span class="icon"></span>
+			</button>
+			
+			<button count="1" style="position: absolute; left: 228px; top: -15px; width: 180px; opacity: 1; pointer-events: auto;" class="button_2 blue_button_active pointer-bottom-left completed-false" id="needs-attention-btn">
+				Needs Attention<span class="icon"></span>
+			</button>
+			
+			<button count="2" style="position: absolute; left: 35px; top: 270px; width: 180px; opacity: 1; pointer-events: auto;" class=" button_3 blue_button_active pointer-right completed-false" id="my-commitments-btn">
+				My Commitments<span class="icon"></span>
+			</button>
+			
+			<button count="3" style="position: absolute; left: 35px; top: 365px; width: 180px; opacity: 1; pointer-events: auto;" class=" button_4 blue_button_active pointer-right completed-false" id="recently-published-btn">
+				Recently Published<span class="icon"></span>
+			</button>
+			
+			<button count="4" style="position: absolute; left: 35px; top: 467px; width: 180px; opacity: 1; pointer-events: auto;" class="button_5 blue_button_active pointer-right completed-false" id="apple-learn-btn">
+				AppleLearn<span class="icon"></span>
+			</button>
+			
+			<button count="5" style="position: absolute; left: 788px; top: 180px; width: 200px; opacity: 1; pointer-events: auto;" class=" button_6 blue_button_active pointer-top-left completed-false" id="emerging-issues-btn">
+				Emerging Issues<span class="icon"></span>
+			</button>
+			
+			<button count="6" style="position: absolute; left: 788px; top: 316px; width: 200px; opacity: 1; pointer-events: auto;" class="button_7 blue_button_active pointer-bottom-left completed-false" id="my-handled-cases-btn">
+				My Handled Cases<span class="icon"></span>
+			</button>
+		
+		</div>
+	</div>
+
+	<div style="height: 642px; width: 1000px; background-color: transparent; display:none" class="slides" count="1" id="my-links-slide">
+		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_variables">
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_image layer">
+			<img style="position: absolute; left: 0px; top: 0px; width: 2560px; opacity: 1; pointer-events: auto; display: inline-block;" src="images/dashboard_01.png" class="bg_image">
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden; display: block;" class="layer_item">
+			<div style="position: absolute; left: 10px; top: 54px; width: 65px; height: 26px; opacity: 1; pointer-events: auto;" class="item_1 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 10px; top: 81px; width: 354px; height: 30px; opacity: 1; pointer-events: auto;" class="item_2 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 790px; top: 572px; width: 200px; opacity: 1; pointer-events: auto;" class="button_1 blue_button_active zoomout" id="my-links-zoomout">
+				<notrans>Zoom Out</notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer svg_layer">
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_1 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+	                        <defs>
+								<mask id="cutout_square_1">
+									<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+									<rect x="10" y="54" width="65" height="26" rx="3px" ry="3px" fill="black"></rect>
+								</mask>
+							</defs>
+						<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_1)"></rect>
+						</svg>
+				</notrans>
+			</div>
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_2 svg_container">
+				<notrans>
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+	                <defs>
+										<mask id="cutout_square_2">
+											<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+											<rect x="10" y="81" width="354" height="30" rx="3px" ry="3px" fill="black"></rect>
+										</mask>
+									</defs>
+									<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_2)"></rect>
+								</svg>
+				</notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer feedback_layer">
+			<div style="position: absolute; left: 385px; top: 44px; width: 605px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_1 feedback_container">
+				<notrans>
+					<div class="feedback valign-top">
+						<p>You use the My Links section to manage internal and external links you frequently use. This section doesn't contain any default links. You choose which links you add to this section.</p>
+					</div>
+				</notrans>
+			</div>
+			<div style="position: absolute; left: 385px; top: 73px; width: 605px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_2 feedback_container">
+				<notrans>
+					<div class="feedback valign-top">
+						<p>To quickly find links that you've added to the My Links section, you can use the search field.</p>
+					</div>
+				</notrans>
+			</div>
+		</div>
+	</div>
+
+	<div style="height: 642px; width: 1000px; background-color: transparent; display:none" class="slides" count="2" id="slide3">
+		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_variables"></div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_image layer"><img style="position: absolute; left: 0px; top: -878px; width: 2560px; opacity: 1; pointer-events: auto; display: inline-block;" src="images/dashboard_01.png" class="bg_image"></div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden; display: block;" class="layer_item">
+			<div style="position: absolute; left: 10px; top: 522px; width: 60px; height: 31px; opacity: 1; pointer-events: auto;" class="item_1 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 10px; top: 572px; width: 200px; opacity: 1; pointer-events: auto;" class="back_btn blue_button_active">
+				<notrans>Back</notrans>
+			</div>
+			<div style="position: absolute; left: 220px; top: 572px; width: 200px; opacity: 1; pointer-events: auto;" class="zoom_out_btn blue_button_active" id="needs-attention-zoomout1">
+				<notrans>Zoom Out</notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer svg_layer">
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_1 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+	                        <defs>
+								<mask id="cutout_square_1">
+									<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+									<rect x="10" y="522" width="60" height="31" rx="3px" ry="3px" fill="black"></rect>
+								</mask>
+							</defs>
+						<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_1)"></rect>
+						</svg></notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer feedback_layer">
+			<div style="position: absolute; left: 10px; top: 495px; width: 605px; height: 0px; opacity: 1; pointer-events: auto;" class=" feedback_1 feedback_container">
+				<notrans>
+					<div class="feedback valign-bottom">
+						<p>You use the Edit button to add and remove links and organize them into folders you create.</p>
+					</div>
+				</notrans>
+			</div>
+		</div>
+	</div>
+
+	<div style="height: 642px; width: 1000px; background-color: transparent; display:none" class="slides" count="3" id="needs-attention-slide">
+		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_variables"></div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_image layer"><img style="position: absolute; left: -506px; top: -40px; width: 2190px; opacity: 1; pointer-events: auto; display: inline-block;" src="images/dashboard_01.png" class="bg_image"></div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden; display: block;" class="layer_item">
+			<div style="position: absolute; left: 5px; top: 15px; width: 203px; height: 36px; opacity: 1; pointer-events: auto;" class="item_1 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 836px; top: 15px; width: 89px; height: 36px; opacity: 1; pointer-events: auto;" class="item_2 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 926px; top: 15px; width: 69px; height: 36px; opacity: 1; pointer-events: auto;" class="item_3 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 12px; top: 474px; width: 977px; height: 61px; opacity: 1; pointer-events: auto;" class="item_4 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 10px; top: 572px; width: 200px; opacity: 1; pointer-events: auto;" class="zoom_out_btn blue_button_active" id="needs-attention-zoomout">
+				<notrans>Zoom Out</notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer svg_layer">
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_1 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+	                        <defs>
+								<mask id="cutout_square_1">
+									<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+									<rect x="5" y="15" width="203" height="36" rx="3px" ry="3px" fill="black"></rect>
+								</mask>
+							</defs>
+						<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_1)"></rect>
+						</svg></notrans>
+			</div>
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_2 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+	                        <defs>
+								<mask id="cutout_square_2">
+									<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+									<rect x="836" y="15" width="89" height="36" rx="3px" ry="3px" fill="black"></rect>
+								</mask>
+							</defs>
+						<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_2)"></rect>
+						</svg></notrans>
+			</div>
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_3 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+	                        <defs>
+								<mask id="cutout_square_3">
+									<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+									<rect x="926" y="15" width="69" height="36" rx="3px" ry="3px" fill="black"></rect>
+								</mask>
+							</defs>
+						<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_3)"></rect>
+						</svg></notrans>
+			</div>
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_4 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+	                        <defs>
+								<mask id="cutout_square_4">
+									<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+									<rect x="12" y="474" width="977" height="61" rx="3px" ry="3px" fill="black"></rect>
+								</mask>
+							</defs>
+						<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_4)"></rect>
+						</svg></notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer feedback_layer">
+			<div style="position: absolute; left: 14px; top: 65px; width: 475px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_1 feedback_container">
+				<notrans>
+					<div class="feedback valign-top">
+						<p>The Needs Attention section lists Bullet*News articles that you need to read and acknowledge before working with customers. </p>
+					</div>
+				</notrans>
+			</div>
+			<div style="position: absolute; left: 510px; top: 65px; width: 475px; height: 0px; opacity: 1; pointer-events: auto;" class="  feedback_2 feedback_container">
+				<notrans>
+					<div class="feedback valign-top">
+						<p>You can click an article to expand it, or you can click Expand All to expand all the articles in this section. You might want to have all the articles closed so you can view other information in Dashboard. When all the articles are expanded, you
+							can click Collapse All to collapse all of them.</p>
+					</div>
+				</notrans>
+			</div>
+			<div style="position: absolute; left: 510px; top: 65px; width: 475px; height: 0px; opacity: 1; pointer-events: auto;" class=" feedback_3 feedback_container">
+				<notrans>
+					<div class="feedback valign-top">
+						<p>Click View All to review Bullet*News articles in Article Viewer from the past 90 days.</p>
+					</div>
+				</notrans>
+			</div>
+			<div style="position: absolute; left: 510px; top: 460px; width: 475px; height: 0px; opacity: 1; pointer-events: auto;" class="    feedback_4 feedback_container">
+				<notrans>
+					<div class="feedback valign-bottom">
+						<p>Each article has the "Yes, I’ve Read It" button. Click this button to acknowledge you have read the article. You must take time to read and acknowledge all articles before you can work with customers. Reading these articles prepares you to provide
+							the best customer experience.</p>
+					</div>
+				</notrans>
+			</div>
+		</div>
+	</div>
+
+	<div style="height: 642px; width: 1000px; background-color: transparent; display:none" class="slides" count="4" id="my-commitments-slide">
+		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_variables">
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_image layer">
+			<img style="position: absolute; left: -506px; top: -591px; width: 2190px; opacity: 1; pointer-events: auto; display: inline-block;" src="images/dashboard_01.png" class="bg_image">
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden; display: block;" class="layer_item">
+			<div style="position: absolute; left: 5px; top: 18px; width: 223px; height: 36px; opacity: 1; pointer-events: auto;" class="item_1 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 18px; top: 60px; width: 53px; height: 52px; opacity: 1; pointer-events: auto;" class="item_2 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 10px; top: 572px; width: 200px; opacity: 1; pointer-events: auto;" class="zoom_out_btn blue_button_active" id="my-commitments-zoomout">
+				<notrans>Zoom Out</notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer svg_layer">
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_1 svg_container">
+				<notrans>
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+						                        <defs>
+													<mask id="cutout_square_1">
+														<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+														<rect x="5" y="18" width="223" height="36" rx="3px" ry="3px" fill="black"></rect>
+													</mask>
+												</defs>
+											</svg></notrans>
+			</div>
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_2 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+						                        <defs>
+													<mask id="cutout_square_2">
+														<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+														<rect x="18" y="60" width="53" height="52" rx="3px" ry="3px" fill="black"></rect>
+													</mask>
+												</defs>
+											<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_2)"></rect>
+											</svg>
+				</notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer feedback_layer">
+			<div style="position: absolute; left: 510px; top: 18px; width: 475px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_1 feedback_container">
+				<notrans>
+					<div class="feedback valign-top">
+						<p>The My Commitments section is for Tier 2 Advisors and specific queues such as Customer Relations. If you have the My Commitments section, you can use it to easily keep track of your follow-ups. My Commitments also lists escalated responses for email
+							Advisors.
+						</p>
+					</div>
+				</notrans>
+			</div>
+			<div style="position: absolute; left: 510px; top: 60px; width: 475px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_2 feedback_container">
+				<notrans>
+					<div class="feedback valign-top">
+						<p>The My Commitments section shows commitments that are due within two days. An alert badge indicates that a commitment is overdue. You should address overdue commitments as soon as possible. </p>
+					</div>
+				</notrans>
+			</div>
+		</div>
+	</div>
+
+	<div style="height: 642px; width: 1000px; background-color: transparent; display:none" class="slides" count="5" id="recently-published-slide">
+		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_variables"></div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_image layer"><img style="position: absolute; left: -506px; top: -591px; width: 2190px; opacity: 1; pointer-events: auto; display: inline-block;" src="images/dashboard_01.png" class="bg_image"></div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden; display: block;" class="layer_item">
+			<div style="position: absolute; left: 5px; top: 228px; width: 241px; height: 36px; opacity: 1; pointer-events: auto;" class="item_1 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 926px; top: 229px; width: 69px; height: 36px; opacity: 1; pointer-events: auto;" class="item_2 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 258px; top: 267px; width: 238px; height: 139px; opacity: 1; pointer-events: auto;" class="item_3 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 10px; top: 572px; width: 200px; opacity: 1; pointer-events: auto;" class="zoom_out_btn blue_button_active" id="recently-published-zoomout">
+				<notrans>Zoom Out</notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer svg_layer">
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_1 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+										                        <defs>
+																	<mask id="cutout_square_1">
+																		<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+																		<rect x="5" y="228" width="241" height="36" rx="3px" ry="3px" fill="black"></rect>
+																	</mask>
+																</defs>
+															<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_1)"></rect>
+															</svg></notrans>
+			</div>
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_2 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+										                        <defs>
+																	<mask id="cutout_square_2">
+																		<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+																		<rect x="926" y="229" width="69" height="36" rx="3px" ry="3px" fill="black"></rect>
+																	</mask>
+																</defs>
+															<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_2)"></rect>
+															</svg></notrans>
+			</div>
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_3 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+										                        <defs>
+																	<mask id="cutout_square_3">
+																		<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+																		<rect x="258" y="267" width="238" height="139" rx="3px" ry="3px" fill="black"></rect>
+																	</mask>
+																</defs>
+															<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_3)"></rect>
+															</svg></notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer feedback_layer">
+			<div style="position: absolute; left: 15px; top: 210px; width: 475px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_1 feedback_container">
+				<notrans>
+					<div class="feedback valign-bottom">
+						<p>The Recently Published section lists SOPs, non-urgent Bullet*News, and ISCS content published in the last 90 days.</p>
+					</div>
+				</notrans>
+			</div>
+			<div style="position: absolute; left: 510px; top: 210px; width: 475px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_2 feedback_container">
+				<notrans>
+					<div class="feedback valign-bottom">
+						<p>To view all the recently published content in Article Viewer, click View All.</p>
+					</div>
+				</notrans>
+			</div>
+			<div style="position: absolute; left: 258px; top: 250px; width: 475px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_3 feedback_container">
+				<notrans>
+					<div class="feedback valign-bottom">
+						<p>You can remove content from this section if you've already reviewed it. To remove content, hover your pointer over each piece of content, and then click Remove.</p>
+					</div>
+				</notrans>
+			</div>
+		</div>
+	</div>
+
+	<div style="height: 642px; width: 1000px; background-color: transparent; display:none" class="slides" count="6" id="apple-learn-slide">
+		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_variables">
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_image layer">
+			<img style="position: absolute; left: -506px; top: -674px; width: 2190px; opacity: 1; pointer-events: auto; display: inline-block;" src="images/dashboard_01.png" class="bg_image"></div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden; display: block;" class="layer_item">
+			<div style="position: absolute; left: 5px; top: 368px; width: 163px; height: 36px; opacity: 1; pointer-events: auto;" class="item_1 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 10px; top: 572px; width: 200px; opacity: 1; pointer-events: auto;" class="button_1 blue_button_active" id="apple-learn-zoomout">
+				<notrans>Zoom Out</notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer svg_layer">
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_1 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+															                        <defs>
+																						<mask id="cutout_square_1">
+																							<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+																							<rect x="5" y="368" width="163" height="36" rx="3px" ry="3px" fill="black"></rect>
+																						</mask>
+																					</defs>
+																				<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_1)"></rect>
+																				</svg>
+				</notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer feedback_layer">
+			<div style="position: absolute; left: 15px; top: 350px; width: 475px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_1 feedback_container">
+				<notrans>
+					<div class="feedback valign-bottom">
+						<p>The AppleLearn section lists new, pending, and overdue training. Apple is releasing AppleLearn to select groups at a time. You might not see the AppleLearn section at the time of the iLog 10 release.</p>
+					</div>
+				</notrans>
+			</div>
+		</div>
+	</div>
+
+	<div style="height: 642px; width: 1000px; background-color: transparent; display:none" class="slides" count="7" id="emerging-issues-slide">
+		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_variables"></div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_image layer"><img style="position: absolute; left: -1560px; top: 0px; width: 2560px; opacity: 1; pointer-events: auto; display: inline-block;" src="images/dashboard_01.png" class="bg_image"></div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden; display: block;" class="layer_item">
+			<div style="position: absolute; left: 875px; top: 5px; width: 53px; height: 39px; opacity: 1; pointer-events: auto;" class="item_1 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 10px; top: 572px; width: 200px; opacity: 1; pointer-events: auto;" class="back_btn blue_button_active">
+				<notrans>Back</notrans>
+			</div>
+			<div style="position: absolute; left: 220px; top: 572px; width: 200px; opacity: 1; pointer-events: auto;" class="zoom_out_btn blue_button_active" id="emerging-issues-zoomout">
+				<notrans>Zoom Out</notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer svg_layer">
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_1 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+																				                        <defs>
+																											<mask id="cutout_square_1">
+																												<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+																												<rect x="875" y="5" width="53" height="39" rx="3px" ry="3px" fill="black"></rect>
+																											</mask>
+																										</defs>
+																									<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_1)"></rect>
+																									</svg></notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer feedback_layer">
+			<div style="position: absolute; left: 450px; top: 60px; width: 535px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_1 feedback_container">
+				<notrans>
+					<div class="feedback valign-top">
+						<p>The My Learning menu displays badges to indicate training that is due and overdue. After clicking the My Learning menu, you can view and open your assigned training in AppleLearn. My Learning shows up to 20 training notifications. You can open AppleLearn
+							to see all assigned training.</p>
+					</div>
+				</notrans>
+			</div>
+		</div>
+	</div>
+
+	<div style="height: 642px; width: 1000px; background-color: transparent; display:none" class="slides" count="8" id="my-handled-cases-slide">
+		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_variables"></div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden;" class="layer_image layer"><img style="position: absolute; left: -1560px; top: -878px; width: 2560px; opacity: 1; pointer-events: auto; display: inline-block;" src="images/dashboard_01.png" class="bg_image"></div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: auto; overflow: hidden; display: block;"
+		 class="layer_item">
+			<div style="position: absolute; left: 451px; top: 51px; width: 126px; height: 28px; opacity: 1; pointer-events: auto;" class="item_1 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 955px; top: 105px; width: 28px; height: 28px; opacity: 1; pointer-events: auto;" class="item_2 item">
+				<notrans></notrans>
+			</div>
+			<div style="position: absolute; left: 10px; top: 572px; width: 200px; opacity: 1; pointer-events: auto;" class="zoom_out_btn blue_button_active" id="my-handled-cases-zoomout">
+				<notrans>Zoom Out</notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer svg_layer">
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_1 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+	                        <defs>
+								<mask id="cutout_square_1">
+									<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+									<rect x="451" y="51" width="126" height="28" rx="3px" ry="3px" fill="black"></rect>
+								</mask>
+							</defs>
+						<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_1)"></rect>
+						</svg></notrans>
+			</div>
+			<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0; pointer-events: auto;" class="fade_2 svg_container">
+				<notrans><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 562" xml:space="preserve">
+	                        <defs>
+								<mask id="cutout_square_2">
+									<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+									<rect x="955" y="105" width="28" height="28" rx="3px" ry="3px" fill="black"></rect>
+								</mask>
+							</defs>
+						<rect x="0" y="0" width="100%" height="100%" class="svg_fade" mask="url(#cutout_square_2)"></rect>
+						</svg></notrans>
+			</div>
+		</div>
+		<div style="position: absolute; left: 0px; top: 40px; width: 1000px; height: 562px; opacity: 1; background-color: transparent; pointer-events: none; overflow: hidden;" class="layer feedback_layer">
+			<div style="position: absolute; left: 451px; top: 230px; width: 532px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_1 feedback_container">
+				<notrans>
+					<div class="feedback valign-top">
+						<p>The My Handled Cases section displays cases you handled within the last 24 hours. The 24-hour period is based on when you log in and out of iLog.</p>
+					</div>
+				</notrans>
+			</div>
+			<div style="position: absolute; left: 451px; top: 230px; width: 532px; height: 0px; opacity: 1; pointer-events: auto;" class="feedback_2 feedback_container">
+				<notrans>
+					<div class="feedback valign-top">
+						<p>Click the star to make a case a favorite. You can make up to 200 cases favorites. Click the star again to remove the case you no longer want to track.</p>
+					</div>
+				</notrans>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
