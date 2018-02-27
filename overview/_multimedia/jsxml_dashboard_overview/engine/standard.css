@@ -206,7 +206,7 @@
   	cursor: pointer;
   	cursor: hand;
   	padding:5px;
-  	outline: none !important;
+  	/*outline: none !important;*/
 }
 .blue_button_active:hover {
   	border: 2px solid #4DA0EE;
